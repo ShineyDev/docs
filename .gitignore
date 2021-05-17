@@ -1,4 +1,4 @@
 # sphinx
-/*/*/.doctrees/
-/*/*/_sources/
-/*/*/.buildinfo
+.doctrees/
+_sources/
+.buildinfo
