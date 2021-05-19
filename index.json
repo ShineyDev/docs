@@ -3,5 +3,10 @@
     "latest": "dotcom/latest",
     "stable": "dotcom/stable",
     "tags": []
+  },
+  "graphql": {
+    "latest": "latest",
+    "stable": "stable",
+    "tags": []
   }
 }
