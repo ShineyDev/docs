@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Errors &mdash; github 1.0.0.0a1+g08bc6c1 documentation</title>
+  <title>Errors &mdash; github 1.0.0.0a1+gaca111a documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.0.0.0a1+g08bc6c1
+                1.0.0.0a1+gaca111a
               </div>
             
           
@@ -186,8 +186,8 @@
 <h1>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="github.errors.GitHubError">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">GitHubError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.GitHubError" title="Permalink to this definition">¶</a></dt>
-<dd><p>The base exception class for the library.</p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">GitHubError</span></span><a class="headerlink" href="#github.errors.GitHubError" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base exception class for the GraphQL client.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="github.errors.GitHubError.message">
 <span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.GitHubError.message" title="Permalink to this definition">¶</a></dt>
@@ -199,15 +199,22 @@
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="github.errors.GitHubError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.GitHubError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="github.errors.HTTPError">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">HTTPError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.HTTPError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents an error in a HTTP response.</p>
+<dt class="sig sig-object py" id="github.errors.ClientResponseError">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseError</span></span><a class="headerlink" href="#github.errors.ClientResponseError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an error in a response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.HTTPError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.HTTPError.message" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.ClientResponseError.message" title="Permalink to this definition">¶</a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -217,9 +224,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.HTTPError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.HTTPError.response" title="Permalink to this definition">¶</a></dt>
-<dd><p>The HTTP response.</p>
+<dt class="sig sig-object py" id="github.errors.ClientResponseError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.ClientResponseError.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.aiohttp.org/en/stable/client_reference.html#aiohttp.ClientResponse" title="(in aiohttp v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiohttp.ClientResponse</span></code></a></p>
@@ -227,26 +234,22 @@
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.HTTPError.data">
-<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.HTTPError.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The response data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>]</p>
-</dd>
-</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="github.errors.ClientResponseError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.ClientResponseError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="github.errors.HTTPUnauthorizedError">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">HTTPUnauthorizedError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.HTTPUnauthorizedError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents a HTTP 401 response.</p>
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPError">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseHTTPError</span></span><a class="headerlink" href="#github.errors.ClientResponseHTTPError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an error in an HTTP response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.HTTPUnauthorizedError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.HTTPUnauthorizedError.message" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.ClientResponseHTTPError.message" title="Permalink to this definition">¶</a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -256,9 +259,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.HTTPUnauthorizedError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.HTTPUnauthorizedError.response" title="Permalink to this definition">¶</a></dt>
-<dd><p>The HTTP response.</p>
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.ClientResponseHTTPError.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.aiohttp.org/en/stable/client_reference.html#aiohttp.ClientResponse" title="(in aiohttp v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiohttp.ClientResponse</span></code></a></p>
@@ -267,8 +270,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.HTTPUnauthorizedError.data">
-<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.HTTPUnauthorizedError.data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPError.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.ClientResponseHTTPError.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The response data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -277,15 +280,68 @@
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.ClientResponseHTTPError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="github.errors.GraphQLError">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">GraphQLError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.GraphQLError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPUnauthorizedError">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseHTTPUnauthorizedError</span></span><a class="headerlink" href="#github.errors.ClientResponseHTTPUnauthorizedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an HTTP 401 response.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPUnauthorizedError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.ClientResponseHTTPUnauthorizedError.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>The error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPUnauthorizedError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.ClientResponseHTTPUnauthorizedError.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.aiohttp.org/en/stable/client_reference.html#aiohttp.ClientResponse" title="(in aiohttp v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiohttp.ClientResponse</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPUnauthorizedError.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.ClientResponseHTTPUnauthorizedError.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The response data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.errors.ClientResponseHTTPUnauthorizedError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.ClientResponseHTTPUnauthorizedError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLError">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseGraphQLError</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents an error in a GraphQL response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.GraphQLError.message" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLError.message" title="Permalink to this definition">¶</a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -295,9 +351,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.GraphQLError.response" title="Permalink to this definition">¶</a></dt>
-<dd><p>The HTTP response.</p>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLError.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.aiohttp.org/en/stable/client_reference.html#aiohttp.ClientResponse" title="(in aiohttp v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiohttp.ClientResponse</span></code></a></p>
@@ -306,8 +362,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLError.data">
-<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.GraphQLError.data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLError.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLError.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The response data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -316,15 +372,22 @@
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.ClientResponseGraphQLError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="github.errors.GraphQLForbiddenError">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">GraphQLForbiddenError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.GraphQLForbiddenError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLForbiddenError">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseGraphQLForbiddenError</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLForbiddenError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a GraphQL <code class="docutils literal notranslate"><span class="pre">&quot;FORBIDDEN&quot;</span></code> response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLForbiddenError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.GraphQLForbiddenError.message" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLForbiddenError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLForbiddenError.message" title="Permalink to this definition">¶</a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -334,9 +397,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLForbiddenError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.GraphQLForbiddenError.response" title="Permalink to this definition">¶</a></dt>
-<dd><p>The HTTP response.</p>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLForbiddenError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLForbiddenError.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.aiohttp.org/en/stable/client_reference.html#aiohttp.ClientResponse" title="(in aiohttp v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiohttp.ClientResponse</span></code></a></p>
@@ -345,8 +408,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLForbiddenError.data">
-<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.GraphQLForbiddenError.data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLForbiddenError.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLForbiddenError.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The response data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -355,15 +418,22 @@
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLForbiddenError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.ClientResponseGraphQLForbiddenError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="github.errors.GraphQLInternalError">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">GraphQLInternalError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.GraphQLInternalError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLInternalError">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseGraphQLInternalError</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLInternalError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a GraphQL <code class="docutils literal notranslate"><span class="pre">&quot;INTERNAL&quot;</span></code> response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLInternalError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.GraphQLInternalError.message" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLInternalError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLInternalError.message" title="Permalink to this definition">¶</a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -373,9 +443,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLInternalError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.GraphQLInternalError.response" title="Permalink to this definition">¶</a></dt>
-<dd><p>The HTTP response.</p>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLInternalError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLInternalError.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.aiohttp.org/en/stable/client_reference.html#aiohttp.ClientResponse" title="(in aiohttp v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiohttp.ClientResponse</span></code></a></p>
@@ -384,25 +454,32 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLInternalError.data">
-<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.GraphQLInternalError.data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLInternalError.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLInternalError.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The response data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLInternalError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.ClientResponseGraphQLInternalError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="github.errors.GraphQLNotFoundError">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">GraphQLNotFoundError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.GraphQLNotFoundError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLNotFoundError">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseGraphQLNotFoundError</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLNotFoundError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a GraphQL <code class="docutils literal notranslate"><span class="pre">&quot;NOT_FOUND&quot;</span></code> response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLNotFoundError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.GraphQLNotFoundError.message" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLNotFoundError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLNotFoundError.message" title="Permalink to this definition">¶</a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -412,9 +489,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLNotFoundError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.GraphQLNotFoundError.response" title="Permalink to this definition">¶</a></dt>
-<dd><p>The HTTP response.</p>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLNotFoundError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLNotFoundError.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.aiohttp.org/en/stable/client_reference.html#aiohttp.ClientResponse" title="(in aiohttp v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiohttp.ClientResponse</span></code></a></p>
@@ -423,8 +500,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="github.errors.GraphQLNotFoundError.data">
-<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.GraphQLNotFoundError.data" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLNotFoundError.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#github.errors.ClientResponseGraphQLNotFoundError.data" title="Permalink to this definition">¶</a></dt>
 <dd><p>The response data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -433,17 +510,28 @@
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="github.errors.ClientResponseGraphQLNotFoundError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.errors.ClientResponseGraphQLNotFoundError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
 </dd></dl>
 
+</dd></dl>
+
+<div class="section" id="hierarchy">
+<h2>Hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="ne">Exception</span>
  <span class="o">+--</span> <span class="n">GitHubError</span>
-      <span class="o">+--</span> <span class="n">HTTPError</span>
-           <span class="o">+--</span> <span class="n">HTTPUnauthorizedError</span>
-           <span class="o">+--</span> <span class="n">GraphQLError</span>
-                <span class="o">+--</span> <span class="n">GraphQLForbiddenError</span>
-                <span class="o">+--</span> <span class="n">GraphQLInternalError</span>
-                <span class="o">+--</span> <span class="n">GraphQLNotFoundError</span>
+      <span class="o">+--</span> <span class="n">ClientResponseError</span>
+           <span class="o">+--</span> <span class="n">ClientResponseHTTPError</span>
+           <span class="o">|</span>    <span class="o">+--</span> <span class="n">ClientResponseHTTPUnauthorizedError</span>
+           <span class="o">+--</span> <span class="n">ClientResponseGraphQLError</span>
+                <span class="o">+--</span> <span class="n">ClientResponseGraphQLForbiddenError</span>
+                <span class="o">+--</span> <span class="n">ClientResponseGraphQLInternalError</span>
+                <span class="o">+--</span> <span class="n">ClientResponseGraphQLNotFoundError</span>
 </pre></div>
+</div>
 </div>
 </div>
 

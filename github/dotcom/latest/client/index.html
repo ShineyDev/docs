@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Client &mdash; github 1.0.0.0a1+g08bc6c1 documentation</title>
+  <title>Client &mdash; github 1.0.0.0a1+gaca111a documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.0.0.0a1+g08bc6c1
+                1.0.0.0a1+gaca111a
               </div>
             
           
@@ -212,14 +212,12 @@ allows us to contact you should there be a problem.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>query</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – <p>A GraphQL document.</p>
+<li><p><strong>document</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – <p>A GraphQL document.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you haven’t already, you should
-<a class="reference external" href="https://graphql.org/learn/">learn GraphQL</a>. You can also read
-<a class="reference external" href="https://docs.github.com/en/graphql/guides">GitHub’s GraphQL guides</a>, find documentation in
-<a class="reference external" href="https://docs.github.com/en/graphql/reference">GitHub’s GraphQL API reference</a>, and use
-<a class="reference external" href="https://docs.github.com/en/graphql/overview/explorer">GitHub’s GraphQL explorer</a>.</p>
+<p>If you haven’t already, you should <a class="reference external" href="https://graphql.org/learn/">learn GraphQL</a>.
+You can also read <a class="reference external" href="https://docs.github.com/en/graphql/guides">GitHub’s GraphQL guides</a>, find documentation
+in <a class="reference external" href="https://docs.github.com/en/graphql/reference">GitHub’s GraphQL API reference</a>, and use <a class="reference external" href="https://graphql.github.com/explorer">GitHub’s GraphiQL Explorer</a>.</p>
 </div>
 </p></li>
 <li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The name of the operation from the document to execute.</p></li>
@@ -238,7 +236,10 @@ allows us to contact you should there be a problem.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../errors/#github.errors.HTTPError" title="github.errors.HTTPError"><strong>HTTPError</strong></a> – Arbitrary HTTP error.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="../errors/#github.errors.ClientResponseHTTPError" title="github.errors.ClientResponseHTTPError"><strong>ClientResponseHTTPError</strong></a> – Arbitrary HTTP error.</p></li>
+<li><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLError" title="github.errors.ClientResponseGraphQLError"><strong>ClientResponseGraphQLError</strong></a> – Arbitrary GraphQL error.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
