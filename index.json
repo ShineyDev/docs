@@ -8,5 +8,10 @@
     "latest": "latest",
     "stable": "stable",
     "tags": []
+  },
+  "screen": {
+    "latest": "latest",
+    "stable": "stable",
+    "tags": []
   }
 }
