@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Client &mdash; github 1.0.0.0a1+geed0768 documentation</title>
+  <title>Client &mdash; github 1.0.0.0a1+g2f62857 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.0.0.0a1+geed0768
+                1.0.0.0a1+g2f62857
               </div>
             
           
@@ -94,24 +94,24 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Client</span></p>
+<p class="caption" role="heading"><span class="caption-text">Client</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Client</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Interfaces</span></p>
+<p class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/node/">Node</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../interfaces/uniformresourcelocatable/">Uniform Resource Locatable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/uniformresourcelocatable/">URL</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Content</span></p>
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../content/codeofconduct/">Code of Conduct</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../errors/">Errors</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Meta</span></p>
+<p class="caption" role="heading"><span class="caption-text">Meta</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../implementation/">Implementation Details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../versioning/">Version Guarantees</a></li>
@@ -204,6 +204,42 @@ allows us to contact you should there be a problem.</p>
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Client.fetch_all_codes_of_conduct">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_all_codes_of_conduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Client.fetch_all_codes_of_conduct" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches all codes of conduct from the GitHub instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of codes of conduct.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="../content/codeofconduct/#github.CodeOfConduct" title="github.CodeOfConduct"><code class="xref py py-class docutils literal notranslate"><span class="pre">CodeOfConduct</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Client.fetch_code_of_conduct">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_code_of_conduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Client.fetch_code_of_conduct" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches a code of conduct by its key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – See <a class="reference internal" href="../content/codeofconduct/#github.CodeOfConduct.key" title="github.CodeOfConduct.key"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CodeOfConduct.key</span></code></a>.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLNotFoundError" title="github.errors.ClientResponseGraphQLNotFoundError"><strong>ClientResponseGraphQLNotFoundError</strong></a> – A code of conduct with the provided key does not exist.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A code of conduct with the provided key.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="../content/codeofconduct/#github.CodeOfConduct" title="github.CodeOfConduct"><code class="xref py py-class docutils literal notranslate"><span class="pre">CodeOfConduct</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="github.Client.request">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">variables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Client.request" title="Permalink to this definition">¶</a></dt>
