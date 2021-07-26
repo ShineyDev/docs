@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Errors &mdash; github 1.0.0.0a1+g2f62857 documentation</title>
+  <title>Errors &mdash; github 1.0.0.0a1+g03baf0b documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.0.0.0a1+g2f62857
+                1.0.0.0a1+g03baf0b
               </div>
             
           
@@ -502,6 +502,18 @@
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="github.errors.ClientDeprecationWarning">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ClientDeprecationWarning</span></span><a class="headerlink" href="#github.errors.ClientDeprecationWarning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning" title="(in Python v3.9)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> from the GraphQL client.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="github.errors.ServerDeprecationWarning">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">github.errors.</span></span><span class="sig-name descname"><span class="pre">ServerDeprecationWarning</span></span><a class="headerlink" href="#github.errors.ServerDeprecationWarning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning" title="(in Python v3.9)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> from the GraphQL server.</p>
+</dd></dl>
+
 <div class="section" id="hierarchy">
 <h2>Hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="ne">Exception</span>
@@ -514,6 +526,10 @@
                 <span class="o">+--</span> <span class="n">ClientResponseGraphQLInternalError</span>
                 <span class="o">+--</span> <span class="n">ClientResponseGraphQLNotFoundError</span>
                 <span class="o">+--</span> <span class="n">ClientResponseGraphQLUnprocessableError</span>
+
+<span class="ne">DeprecationWarning</span>
+ <span class="o">+--</span> <span class="n">ClientDeprecationWarning</span>
+ <span class="o">+--</span> <span class="n">ServerDeprecationWarning</span>
 </pre></div>
 </div>
 </div>
