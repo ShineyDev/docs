@@ -13,5 +13,10 @@
     "latest": "latest",
     "stable": "stable",
     "tags": []
+  },
+  "sync-labels-action": {
+    "latest": "latest",
+    "stable": "stable",
+    "tags": []
   }
 }
