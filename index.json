@@ -17,6 +17,8 @@
   "sync-labels-action": {
     "latest": "latest",
     "stable": "stable",
-    "tags": []
+    "tags": [
+      "v1.0.0"
+    ]
   }
 }

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Action &mdash; sync-labels-action 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Script" href="../script/" />
+    <link rel="prev" title="Schema" href="../../data/schema/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../" class="icon icon-home"> sync-labels-action
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../data/file/">File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data/schema/">Schema</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Action</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script/">Script</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">sync-labels-action</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+      <li>Action</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/interfaces/action.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="action">
+<h1>Action<a class="headerlink" href="#action" title="Permalink to this headline"></a></h1>
+<p>This document will guide you through using sync-labels-action as a GitHub Action.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This document is incomplete.</p>
+</div>
+<section id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline"></a></h2>
+<p>Copy the following into <code class="docutils literal notranslate"><span class="pre">.github/workflows/sync.yml</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions">Workflow syntax for GitHub Actions</a></p>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sync</span>
+
+<span class="nt">on</span><span class="p">:</span>
+  <span class="nt">push</span><span class="p">:</span>
+    <span class="nt">paths</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">.github/data/labels.yml</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">.github/workflows/sync.yml</span>
+  <span class="nt">schedule</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">cron</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0 0 * * *</span>
+  <span class="nt">workflow_dispatch</span><span class="p">:</span>
+
+<span class="nt">env</span><span class="p">:</span>
+  <span class="nt">AUTH_TOKEN</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.SYNC_TOKEN }}</span>
+  <span class="nt">PYTHON_VERSION</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3.9</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sync Labels</span>
+    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+    <span class="nt">steps</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Checkout</span>
+      <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Set up Python ${{ env.PYTHON_VERSION }}</span>
+      <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v2</span>
+      <span class="nt">with</span><span class="p">:</span>
+        <span class="nt">python-version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ env.PYTHON_VERSION }}</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sync Labels</span>
+      <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ShineyDev/sync-labels-action@main</span>
+      <span class="nt">with</span><span class="p">:</span>
+        <span class="nt">source</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.github/data/labels.yml</span>
+        <span class="nt">token</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ env.AUTH_TOKEN }}</span>
+</pre></div>
+</div>
+</section>
+<section id="token">
+<h2>Token<a class="headerlink" href="#token" title="Permalink to this headline"></a></h2>
+<p>Create a <a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">personal access token</a> with the <code class="docutils literal notranslate"><span class="pre">public_repo</span></code> scope and copy it into an <a class="reference external" href="https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository">encrypted repository secret</a> named <code class="docutils literal notranslate"><span class="pre">SYNC_TOKEN</span></code>.</p>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline"></a></h2>
+<p>Copy the following into <code class="docutils literal notranslate"><span class="pre">.github/data/labels.yml</span></code>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../data/file/"><span class="doc">Writing a data file</span></a></p>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">labels</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bug</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Something isn&#39;t working</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0xD73A4A</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">documentation</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Improvements or additions to documentation</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0x0075CA</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">duplicate</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This issue or pull request already exists</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0xCFD3D7</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">enhancement</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">New feature or request</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0xA2EEEF</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">help wanted</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Extra attention is needed</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0x008672</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">good first issue</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Good for newcomers</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0x7057FF</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">invalid</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This doesn&#39;t seem right</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0xE4E669</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">question</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Further information is requested</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0xD876E3</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wontfix</span>
+  <span class="nt">description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This will not be worked on</span>
+  <span class="nt">color</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0xFFFFFF</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-present, ShineyDev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
