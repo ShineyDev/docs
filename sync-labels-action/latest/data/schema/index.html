@@ -77,202 +77,211 @@
            <div itemprop="articleBody">
              
   <section id="schema">
-<span id="id1"></span><h1>Schema<a class="headerlink" href="#schema" title="Permalink to this headline"></a></h1>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{
-  &quot;$id&quot;: &quot;https://raw.githubusercontent.com/ShineyDev/sync-labels-action/main/schema.json&quot;,
-  &quot;$schema&quot;: &quot;https://json-schema.org/draft-07/schema&quot;,
-  &quot;additionalProperties&quot;: false,
-  &quot;definitions&quot;: {
-    &quot;color_value&quot;: {
-      &quot;oneOf&quot;: [
-        {
-          &quot;maximum&quot;: 16777215,
-          &quot;minimum&quot;: 0,
-          &quot;type&quot;: &quot;integer&quot;
-        },
-        {
-          &quot;pattern&quot;: &quot;^[a-zA-Z]+(?:[+-][rRgGbBhHsSvV][0-9]+)*$&quot;,
-          &quot;type&quot;: &quot;string&quot;
-        }
-      ]
-    },
-    &quot;description_value&quot;: {
-      &quot;minLength&quot;: 1,
-      &quot;type&quot;: &quot;string&quot;
-    },
-    &quot;name_value&quot;: {
-      &quot;minLength&quot;: 1,
-      &quot;type&quot;: &quot;string&quot;
-    }
-  },
-  &quot;minProperties&quot;: 1,
-  &quot;properties&quot;: {
-    &quot;colors&quot;: {
-      &quot;oneOf&quot;: [
-        {
-          &quot;additionalItems&quot;: false,
-          &quot;items&quot;: {
-            &quot;additionalProperties&quot;: false,
-            &quot;properties&quot;: {
-              &quot;name&quot;: {
-                &quot;pattern&quot;: &quot;^[a-zA-Z]+$&quot;,
-                &quot;type&quot;: &quot;string&quot;
-              },
-              &quot;value&quot;: {
-                &quot;$ref&quot;: &quot;#/definitions/color_value&quot;
-              }
-            },
-            &quot;required&quot;: [ &quot;name&quot;, &quot;value&quot; ],
-            &quot;type&quot;: &quot;object&quot;
-          },
-          &quot;minItems&quot;: 1,
-          &quot;type&quot;: &quot;array&quot;
-        },
-        {
-          &quot;additionalProperties&quot;: false,
-          &quot;minProperties&quot;: 1,
-          &quot;patternProperties&quot;: {
-            &quot;^[a-zA-Z]+$&quot;: {
-              &quot;$ref&quot;: &quot;#/definitions/color_value&quot;
-            }
-          },
-          &quot;type&quot;: &quot;object&quot;
-        }
-      ]
-    },
-    &quot;defaults&quot;: {
-      &quot;additionalProperties&quot;: false,
-      &quot;minProperties&quot;: 1,
-      &quot;properties&quot;: {
-        &quot;color&quot;: {
-          &quot;$ref&quot;: &quot;#/definitions/color_value&quot;
-        },
-        &quot;description&quot;: {
-          &quot;$ref&quot;: &quot;#/definitions/description_value&quot;
-        }
-      },
-      &quot;type&quot;: &quot;object&quot;
-    },
-    &quot;groups&quot;: {
-      &quot;oneOf&quot;: [
-        {
-          &quot;additionalItems&quot;: false,
-          &quot;items&quot;: {
-            &quot;additionalProperties&quot;: false,
-            &quot;minProperties&quot;: 1,
-            &quot;properties&quot;: {
-              &quot;color&quot;: {
-                &quot;$ref&quot;: &quot;#/definitions/color_value&quot;
-              },
-              &quot;description&quot;: {
-                &quot;$ref&quot;: &quot;#/definitions/description_value&quot;
-              },
-              &quot;labels&quot;: {
-                &quot;$ref&quot;: &quot;#/properties/labels&quot;
-              },
-              &quot;name&quot;: {
-                &quot;$ref&quot;: &quot;#/definitions/name_value&quot;
-              }
-            },
-            &quot;type&quot;: &quot;object&quot;
-          },
-          &quot;minItems&quot;: 1,
-          &quot;type&quot;: &quot;array&quot;
-        },
-        {
-          &quot;additionalProperties&quot;: false,
-          &quot;minProperties&quot;: 1,
-          &quot;patternProperties&quot;: {
-            &quot;^.+$&quot;: {
-              &quot;additionalProperties&quot;: false,
-              &quot;minProperties&quot;: 1,
-              &quot;properties&quot;: {
-                &quot;color&quot;: {
-                  &quot;$ref&quot;: &quot;#/definitions/color_value&quot;
-                },
-                &quot;description&quot;: {
-                  &quot;$ref&quot;: &quot;#/definitions/description_value&quot;
-                },
-                &quot;labels&quot;: {
-                  &quot;$ref&quot;: &quot;#/properties/labels&quot;
-                }
-              },
-              &quot;type&quot;: &quot;object&quot;
-            }
-          },
-          &quot;type&quot;: &quot;object&quot;
-        }
-      ]
-    },
-    &quot;inherit&quot;: {
-      &quot;oneOf&quot;: [
-        {
-          &quot;additionalItems&quot;: false,
-          &quot;items&quot;: {
-            &quot;pattern&quot;: &quot;^https?:\\/\\/.+$&quot;,
-            &quot;type&quot;: &quot;string&quot;
-          },
-          &quot;minItems&quot;: 1,
-          &quot;type&quot;: &quot;array&quot;
-        },
-        {
-          &quot;pattern&quot;: &quot;^https?:\\/\\/.+$&quot;,
-          &quot;type&quot;: &quot;string&quot;
-        }
-      ]
-    },
-    &quot;labels&quot;: {
-      &quot;oneOf&quot;: [
-        {
-          &quot;additionalItems&quot;: false,
-          &quot;items&quot;: {
-            &quot;additionalProperties&quot;: false,
-            &quot;minProperties&quot;: 1,
-            &quot;properties&quot;: {
-              &quot;color&quot;: {
-                &quot;$ref&quot;: &quot;#/definitions/color_value&quot;
-              },
-              &quot;description&quot;: {
-                &quot;$ref&quot;: &quot;#/definitions/description_value&quot;
-              },
-              &quot;name&quot;: {
-                &quot;$ref&quot;: &quot;#/definitions/name_value&quot;
-              }
-            },
-            &quot;required&quot;: [ &quot;name&quot; ],
-            &quot;type&quot;: &quot;object&quot;
-          },
-          &quot;minItems&quot;: 1,
-          &quot;type&quot;: &quot;array&quot;
-        },
-        {
-          &quot;additionalProperties&quot;: false,
-          &quot;minProperties&quot;: 1,
-          &quot;patternProperties&quot;: {
-            &quot;^.+$&quot;: {
-              &quot;additionalProperties&quot;: false,
-              &quot;minProperties&quot;: 1,
-              &quot;properties&quot;: {
-                &quot;color&quot;: {
-                  &quot;$ref&quot;: &quot;#/definitions/color_value&quot;
-                },
-                &quot;description&quot;: {
-                  &quot;$ref&quot;: &quot;#/definitions/description_value&quot;
-                }
-              },
-              &quot;type&quot;: &quot;object&quot;
-            }
-          },
-          &quot;type&quot;: &quot;object&quot;
-        }
-      ]
-    }
-  },
-  &quot;title&quot;: &quot;ShineyDev/sync-labels-action: data file schema&quot;,
-  &quot;type&quot;: &quot;object&quot;
-}
+<h1>Schema<a class="headerlink" href="#schema" title="Permalink to this headline"></a></h1>
+<p>This document contains the JSON schema for a data file.</p>
+<section id="use">
+<h2>Use<a class="headerlink" href="#use" title="Permalink to this headline"></a></h2>
+<p>To use this schema in a YAML language server -supporting IDE, prepend the following modeline to your data file:</p>
+<pre class="literal-block"># yaml-language-server: $schema=https://raw.githubusercontent.com/ShineyDev/sync-labels-action/v1.2.3/schema.json</pre>
+</section>
+<section id="id1">
+<h2>Schema<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;$id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://raw.githubusercontent.com/ShineyDev/sync-labels-action/main/schema.json&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://json-schema.org/draft-07/schema&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;definitions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;color_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;oneOf&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;maximum&quot;</span><span class="p">:</span> <span class="mi">16777215</span><span class="p">,</span>
+          <span class="nt">&quot;minimum&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;^[a-zA-Z]+(?:[+-][rRgGbBhHsSvV][0-9]+)*$&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;description_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;minLength&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;name_value&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;minLength&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;colors&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;oneOf&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;additionalItems&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;^[a-zA-Z]+$&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/color_value&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span> <span class="p">],</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;patternProperties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;^[a-zA-Z]+$&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/color_value&quot;</span>
+            <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;defaults&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/color_value&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/description_value&quot;</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;oneOf&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;additionalItems&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/color_value&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/description_value&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/properties/labels&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/name_value&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;patternProperties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;^.+$&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/color_value&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/description_value&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/properties/labels&quot;</span>
+                <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+            <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;inherit&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;oneOf&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;additionalItems&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;^https?:\\/\\/.+$&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;^https?:\\/\\/.+$&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;labels&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;oneOf&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;additionalItems&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/color_value&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/description_value&quot;</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/name_value&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;name&quot;</span> <span class="p">],</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+          <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nt">&quot;patternProperties&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;^.+$&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+              <span class="nt">&quot;minProperties&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/color_value&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;$ref&quot;</span><span class="p">:</span> <span class="s2">&quot;#/definitions/description_value&quot;</span>
+                <span class="p">}</span>
+              <span class="p">},</span>
+              <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+            <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;ShineyDev/sync-labels-action: data file schema&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
+</section>
 </section>
 
 
