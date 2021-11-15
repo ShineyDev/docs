@@ -78,14 +78,10 @@
   <section id="script">
 <h1>Script<a class="headerlink" href="#script" title="Permalink to this headline"></a></h1>
 <p>This document will guide you through using sync-labels-action as a Python script.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This document is incomplete.</p>
-</div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>script.py [--partial] --repository OWNER/NAME --source PATH --token TOKEN --verbosity {0,1,2,3,4}
 
 optional arguments:
-  --partial                Marks the source as partial, skipping the delete flow.
+  --partial                Marks the source as partial.
   --repository OWNER/NAME  A GitHub repository. (example: &#39;ShineyDev/sync-labels-action&#39;)
   --source PATH            A path or a URL to the source file. (example: &#39;./.github/data/labels.yml&#39;)
   --token TOKEN            A GitHub personal access token with the &#39;public_repo&#39; scope.
