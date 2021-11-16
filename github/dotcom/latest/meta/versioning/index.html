@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Uniform Resource Locatable &mdash; github v1.0.0.0a</title>
+  <title>Version Guarantees &mdash; github v1.0.0.0a</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
@@ -19,8 +19,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="Code of Conduct" href="../../content/codeofconduct/" />
-    <link rel="prev" title="Node" href="../node/" /> 
+    <link rel="prev" title="Implementation Details" href="../implementation/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,9 +45,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../client/client/">Client</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../node/">Node</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Uniform Resource Locatable</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/node/">Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/uniformresourcelocatable/">Uniform Resource Locatable</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul>
@@ -59,9 +58,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../other/errors/">Errors</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Meta</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../meta/implementation/">Implementation Details</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../meta/versioning/">Version Guarantees</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../implementation/">Implementation Details</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Version Guarantees</a></li>
 </ul>
 
         </div>
@@ -78,9 +77,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-      <li>Uniform Resource Locatable</li>
+      <li>Version Guarantees</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/interfaces/uniformresourcelocatable.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/meta/versioning.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -88,36 +87,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="uniform-resource-locatable">
-<h1>Uniform Resource Locatable<a class="headerlink" href="#uniform-resource-locatable" title="Permalink to this headline"></a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="github.UniformResourceLocatable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">github.</span></span><span class="sig-name descname"><span class="pre">UniformResourceLocatable</span></span><a class="headerlink" href="#github.UniformResourceLocatable" title="Permalink to this definition"></a></dt>
-<dd><p>Represents an object with a URL.</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="github.UniformResourceLocatable.resource_path">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resource_path</span></span><a class="headerlink" href="#github.UniformResourceLocatable.resource_path" title="Permalink to this definition"></a></dt>
-<dd><p>An HTTP path to the resource.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="github.UniformResourceLocatable.url">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">url</span></span><a class="headerlink" href="#github.UniformResourceLocatable.url" title="Permalink to this definition"></a></dt>
-<dd><p>An HTTP URL to the resource.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+  <section id="version-guarantees">
+<h1>Version Guarantees<a class="headerlink" href="#version-guarantees" title="Permalink to this headline"></a></h1>
+<p>This document outlines the version guarantees of the library.</p>
+<section id="what">
+<h2>What?<a class="headerlink" href="#what" title="Permalink to this headline"></a></h2>
+<p>This library follows the following modified <a class="reference external" href="https://semver.org/">semantic versioning</a> principle.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Incompatible changes apply only to non-preview documented APIs in a final release.</p>
+</div>
+<p>Given a version number PRIME.MAJOR.MINOR.MICRO, increment the:</p>
+<ul class="simple">
+<li><p>PRIME version when you make incompatible API changes,</p></li>
+<li><p>MAJOR version when you make incompatible API changes due to an incompatible GitHub API change,</p></li>
+<li><p>MINOR version when you add functionality in a compatible manner, and;</p></li>
+<li><p>MICRO version when you make compatible bug fixes.</p></li>
+</ul>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following examples are non-exhaustive.</p>
+</div>
+<section id="examples-of-incompatible-changes">
+<h3>Examples of incompatible changes<a class="headerlink" href="#examples-of-incompatible-changes" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Removing an API.</p></li>
+<li><p>Renaming an API without providing an alias.</p></li>
+</ul>
+</section>
+<section id="examples-of-compatible-changes">
+<h3>Examples of compatible changes<a class="headerlink" href="#examples-of-compatible-changes" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Modifying an undocumented API.</p></li>
+<li><p>Modifying the behavior of an API to fix a bug.</p></li>
+</ul>
+</section>
+</section>
 </section>
 
 
