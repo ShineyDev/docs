@@ -94,6 +94,42 @@
 <dt class="sig sig-object py" id="github.UniformResourceLocatable">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">github.</span></span><span class="sig-name descname"><span class="pre">UniformResourceLocatable</span></span><a class="headerlink" href="#github.UniformResourceLocatable" title="Permalink to this definition"></a></dt>
 <dd><p>Represents an object with a URL.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="github.UniformResourceLocatable.fetch_resource_path">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_resource_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.UniformResourceLocatable.fetch_resource_path" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches an HTTP path to the resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../other/errors/#github.errors.ClientObjectMissingFieldError" title="github.errors.ClientObjectMissingFieldError"><strong>ClientObjectMissingFieldError</strong></a> – The <a class="reference internal" href="#github.UniformResourceLocatable.url" title="github.UniformResourceLocatable.url"><code class="xref py py-attr docutils literal notranslate"><span class="pre">url</span></code></a> attribute is missing.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An HTTP path to the resource.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.UniformResourceLocatable.fetch_url">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.UniformResourceLocatable.fetch_url" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches an HTTP URL to the resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../other/errors/#github.errors.ClientObjectMissingFieldError" title="github.errors.ClientObjectMissingFieldError"><strong>ClientObjectMissingFieldError</strong></a> – The <a class="reference internal" href="#github.UniformResourceLocatable.url" title="github.UniformResourceLocatable.url"><code class="xref py py-attr docutils literal notranslate"><span class="pre">url</span></code></a> attribute is missing.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An HTTP URL to the resource.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="github.UniformResourceLocatable.resource_path">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resource_path</span></span><a class="headerlink" href="#github.UniformResourceLocatable.resource_path" title="Permalink to this definition"></a></dt>
