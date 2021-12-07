@@ -53,6 +53,8 @@
 <p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../content/codeofconduct/">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/license/">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/licenserule/">LicenseRule</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other</span></p>
 <ul>
@@ -129,6 +131,24 @@ allows us to contact you should there be a problem.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="github.Client.fetch_all_licenses">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_all_licenses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Client.fetch_all_licenses" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches all licenses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch a license body.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of licenses.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="../../content/license/#github.License" title="github.License"><code class="xref py py-class docutils literal notranslate"><span class="pre">License</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="github.Client.fetch_code_of_conduct">
 <em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_code_of_conduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Client.fetch_code_of_conduct" title="Permalink to this definition"></a></dt>
 <dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
@@ -148,6 +168,30 @@ allows us to contact you should there be a problem.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="../../content/codeofconduct/#github.CodeOfConduct" title="github.CodeOfConduct"><code class="xref py py-class docutils literal notranslate"><span class="pre">CodeOfConduct</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Client.fetch_license">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Client.fetch_license" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches a license by its key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – See <a class="reference internal" href="../../content/license/#github.License.key" title="github.License.key"><code class="xref py py-attr docutils literal notranslate"><span class="pre">License.key</span></code></a>.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch the license body.</p></li>
+<li><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLNotFoundError" title="github.errors.ClientResponseGraphQLNotFoundError"><strong>ClientResponseGraphQLNotFoundError</strong></a> – A license with the provided key does not exist.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A license with the provided key.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../content/license/#github.License" title="github.License"><code class="xref py py-class docutils literal notranslate"><span class="pre">License</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
