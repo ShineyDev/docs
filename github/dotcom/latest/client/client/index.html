@@ -19,7 +19,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="Node" href="../../interfaces/node/" />
+    <link rel="next" title="Errors" href="../errors/" />
     <link rel="prev" title="github" href="../../" /> 
 </head>
 
@@ -44,6 +44,7 @@
               <p class="caption" role="heading"><span class="caption-text">Client</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../errors/">Errors</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
 <ul>
@@ -56,9 +57,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../content/license/">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/licenserule/">LicenseRule</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Metadata</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../other/errors/">Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../metadata/metadata/">Metadata</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Meta</span></p>
 <ul>
@@ -119,7 +120,7 @@ allows us to contact you should there be a problem.</p>
 <p>Fetches all codes of conduct from the GitHub instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch a code of conduct body.</p>
+<dd class="field-odd"><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch a code of conduct body.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A list of codes of conduct.</p>
@@ -137,7 +138,7 @@ allows us to contact you should there be a problem.</p>
 <p>Fetches all licenses.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch a license body.</p>
+<dd class="field-odd"><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch a license body.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A list of licenses.</p>
@@ -159,8 +160,8 @@ allows us to contact you should there be a problem.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch the code of conduct body.</p></li>
-<li><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLNotFoundError" title="github.errors.ClientResponseGraphQLNotFoundError"><strong>ClientResponseGraphQLNotFoundError</strong></a> – A code of conduct with the provided key does not exist.</p></li>
+<li><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch the code of conduct body.</p></li>
+<li><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLNotFoundError" title="github.errors.ClientResponseGraphQLNotFoundError"><strong>ClientResponseGraphQLNotFoundError</strong></a> – A code of conduct with the provided key does not exist.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Returns</dt>
@@ -183,8 +184,8 @@ allows us to contact you should there be a problem.</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch the license body.</p></li>
-<li><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLNotFoundError" title="github.errors.ClientResponseGraphQLNotFoundError"><strong>ClientResponseGraphQLNotFoundError</strong></a> – A license with the provided key does not exist.</p></li>
+<li><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLInternalError" title="github.errors.ClientResponseGraphQLInternalError"><strong>ClientResponseGraphQLInternalError</strong></a> – The GraphQL service failed to fetch the license body.</p></li>
+<li><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLNotFoundError" title="github.errors.ClientResponseGraphQLNotFoundError"><strong>ClientResponseGraphQLNotFoundError</strong></a> – A license with the provided key does not exist.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Returns</dt>
@@ -192,6 +193,21 @@ allows us to contact you should there be a problem.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="../../content/license/#github.License" title="github.License"><code class="xref py py-class docutils literal notranslate"><span class="pre">License</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Client.fetch_metadata">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Client.fetch_metadata" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches GitHub instance metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>GitHub instance metadata.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../metadata/metadata/#github.Metadata" title="github.Metadata"><code class="xref py py-class docutils literal notranslate"><span class="pre">Metadata</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -229,8 +245,8 @@ in <a class="reference external" href="https://docs.github.com/en/graphql/refere
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseHTTPError" title="github.errors.ClientResponseHTTPError"><strong>ClientResponseHTTPError</strong></a> – Arbitrary HTTP error.</p></li>
-<li><p><a class="reference internal" href="../../other/errors/#github.errors.ClientResponseGraphQLError" title="github.errors.ClientResponseGraphQLError"><strong>ClientResponseGraphQLError</strong></a> – Arbitrary GraphQL error.</p></li>
+<li><p><a class="reference internal" href="../errors/#github.errors.ClientResponseHTTPError" title="github.errors.ClientResponseHTTPError"><strong>ClientResponseHTTPError</strong></a> – Arbitrary HTTP error.</p></li>
+<li><p><a class="reference internal" href="../errors/#github.errors.ClientResponseGraphQLError" title="github.errors.ClientResponseGraphQLError"><strong>ClientResponseGraphQLError</strong></a> – Arbitrary GraphQL error.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
