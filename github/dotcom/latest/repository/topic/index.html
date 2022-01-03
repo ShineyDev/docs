@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topic &mdash; github v1.0.0.0a</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="Implementation Details" href="../../meta/implementation/" />
+    <link rel="prev" title="Rate Limit" href="../../metadata/ratelimit/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../" class="icon icon-home"> github
+          </a>
+              <div class="version">
+                v1.0.0.0a
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Client</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../client/client/">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../client/errors/">Errors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/actor/">Actor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/node/">Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/packageowner/">Package Owner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/starrable/">Starrable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/uniformresourcelocatable/">Uniform Resource Locatable</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../content/codeofconduct/">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/license/">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/licenserule/">LicenseRule</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Metadata</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../metadata/metadata/">Metadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../metadata/ratelimit/">Rate Limit</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Topic</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Meta</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/implementation/">Implementation Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/versioning/">Version Guarantees</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">github</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+      <li>Topic</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/repository/topic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="topic">
+<h1>Topic<a class="headerlink" href="#topic" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="github.Topic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">github.</span></span><span class="sig-name descname"><span class="pre">Topic</span></span><a class="headerlink" href="#github.Topic" title="Permalink to this definition"></a></dt>
+<dd><p>Represents a repository topic.</p>
+<div class="operations docutils container">
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span></span></dt>
+<dd></dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span></span></dt>
+<dd><p>Compares two objects by their <a class="reference internal" href="#github.Topic.id" title="github.Topic.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ID</span></code></a>.</p>
+</dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">hash(x)</span></span></dt>
+<dd><p>Returns the hash of the object’s <a class="reference internal" href="#github.Topic.id" title="github.Topic.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ID</span></code></a>.</p>
+</dd></dl>
+
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Topic.fetch_id">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Topic.fetch_id" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches the ID of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../client/errors/#github.errors.ClientObjectMissingFieldError" title="github.errors.ClientObjectMissingFieldError"><strong>ClientObjectMissingFieldError</strong></a> – The <a class="reference internal" href="#github.Topic.id" title="github.Topic.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Topic.fetch_name">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Topic.fetch_name" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches the name of the topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../client/errors/#github.errors.ClientObjectMissingFieldError" title="github.errors.ClientObjectMissingFieldError"><strong>ClientObjectMissingFieldError</strong></a> – The <a class="reference internal" href="#github.Topic.id" title="github.Topic.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Topic.fetch_related_topics">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_related_topics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Topic.fetch_related_topics" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches topics related to the topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The number of related topics to fetch. Defaults to 3.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../client/errors/#github.errors.ClientObjectMissingFieldError" title="github.errors.ClientObjectMissingFieldError"><strong>ClientObjectMissingFieldError</strong></a> – The <a class="reference internal" href="#github.Topic.id" title="github.Topic.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#github.Topic" title="github.Topic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Topic</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Topic.fetch_stargazer_count">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_stargazer_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Topic.fetch_stargazer_count" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches the number of stars on the starrable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Topic.fetch_viewer_has_starred">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_viewer_has_starred</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Topic.fetch_viewer_has_starred" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches whether the viewer has starred the starrable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="github.Topic.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#github.Topic.id" title="Permalink to this definition"></a></dt>
+<dd><p>The ID of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="github.Topic.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#github.Topic.name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="github.Topic.stargazer_count">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stargazer_count</span></span><a class="headerlink" href="#github.Topic.stargazer_count" title="Permalink to this definition"></a></dt>
+<dd><p>The number of stars on the starrable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="github.Topic.viewer_has_starred">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">viewer_has_starred</span></span><a class="headerlink" href="#github.Topic.viewer_has_starred" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the viewer has starred the starrable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019-present, ShineyDev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

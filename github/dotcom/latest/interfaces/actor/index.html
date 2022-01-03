@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LicenseRule &mdash; github v1.0.0.0a</title>
+  <title>Actor &mdash; github v1.0.0.0a</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
@@ -19,8 +19,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="Metadata" href="../../metadata/metadata/" />
-    <link rel="prev" title="License" href="../license/" /> 
+    <link rel="next" title="Node" href="../node/" />
+    <link rel="prev" title="Errors" href="../../client/errors/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,18 +47,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../../client/errors/">Errors</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../interfaces/actor/">Actor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../interfaces/node/">Node</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../interfaces/packageowner/">Package Owner</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../interfaces/starrable/">Starrable</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../interfaces/uniformresourcelocatable/">Uniform Resource Locatable</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Actor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../node/">Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packageowner/">Package Owner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starrable/">Starrable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uniformresourcelocatable/">Uniform Resource Locatable</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Content</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../codeofconduct/">Code of Conduct</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../license/">License</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">LicenseRule</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../content/codeofconduct/">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/license/">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/licenserule/">LicenseRule</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Metadata</span></p>
 <ul>
@@ -89,9 +89,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-      <li>LicenseRule</li>
+      <li>Actor</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/content/licenserule.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/interfaces/actor.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -99,16 +99,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="licenserule">
-<h1>LicenseRule<a class="headerlink" href="#licenserule" title="Permalink to this headline"></a></h1>
+  <section id="actor">
+<h1>Actor<a class="headerlink" href="#actor" title="Permalink to this headline"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="github.LicenseRule">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">github.</span></span><span class="sig-name descname"><span class="pre">LicenseRule</span></span><a class="headerlink" href="#github.LicenseRule" title="Permalink to this definition"></a></dt>
-<dd><p>Represents a license rule.</p>
+<dt class="sig sig-object py" id="github.Actor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">github.</span></span><span class="sig-name descname"><span class="pre">Actor</span></span><a class="headerlink" href="#github.Actor" title="Permalink to this definition"></a></dt>
+<dd><p>Represents an object that can take action.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Actor.fetch_avatar_url">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_avatar_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#github.Actor.fetch_avatar_url" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches a URL to the avatar of the actor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The width of the square image in pixels.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="github.Actor.fetch_login">
+<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Actor.fetch_login" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
+<p>Fetches the login of the actor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
-<dt class="sig sig-object py" id="github.LicenseRule.description">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#github.LicenseRule.description" title="Permalink to this definition"></a></dt>
-<dd><p>A description of the license rule.</p>
+<dt class="sig sig-object py" id="github.Actor.avatar_url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avatar_url</span></span><a class="headerlink" href="#github.Actor.avatar_url" title="Permalink to this definition"></a></dt>
+<dd><p>A URL to the avatar of the actor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
@@ -117,20 +144,9 @@
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="github.LicenseRule.key">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#github.LicenseRule.key" title="Permalink to this definition"></a></dt>
-<dd><p>The machine-readable key of the license rule.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="github.LicenseRule.label">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#github.LicenseRule.label" title="Permalink to this definition"></a></dt>
-<dd><p>The human-readable label of the license rule.</p>
+<dt class="sig sig-object py" id="github.Actor.login">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">login</span></span><a class="headerlink" href="#github.Actor.login" title="Permalink to this definition"></a></dt>
+<dd><p>The login of the actor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>

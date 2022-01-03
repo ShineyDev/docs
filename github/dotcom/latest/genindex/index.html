@@ -45,7 +45,10 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/actor/">Actor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/node/">Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/packageowner/">Package Owner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interfaces/starrable/">Starrable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interfaces/uniformresourcelocatable/">Uniform Resource Locatable</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Content</span></p>
@@ -57,6 +60,11 @@
 <p class="caption" role="heading"><span class="caption-text">Metadata</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../metadata/metadata/">Metadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metadata/ratelimit/">Rate Limit</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../repository/topic/">Topic</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Meta</span></p>
 <ul>
@@ -91,7 +99,8 @@
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
- <a href="#B"><strong>B</strong></a>
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#F"><strong>F</strong></a>
@@ -105,9 +114,23 @@
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
  
 </div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../interfaces/actor/#github.Actor">Actor (class in github)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../interfaces/actor/#github.Actor.avatar_url">avatar_url (github.Actor property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -135,6 +158,8 @@
 </li>
       <li><a href="../client/errors/#github.errors.ClientResponseError">ClientResponseError (class in github.errors)</a>
 </li>
+      <li><a href="../client/errors/#github.errors.ClientResponseGraphQLArgumentValueRangeExceededError">ClientResponseGraphQLArgumentValueRangeExceededError (class in github.errors)</a>
+</li>
       <li><a href="../client/errors/#github.errors.ClientResponseGraphQLError">ClientResponseGraphQLError (class in github.errors)</a>
 </li>
       <li><a href="../client/errors/#github.errors.ClientResponseGraphQLForbiddenError">ClientResponseGraphQLForbiddenError (class in github.errors)</a>
@@ -144,6 +169,8 @@
       <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInsufficientScopesError">ClientResponseGraphQLInsufficientScopesError (class in github.errors)</a>
 </li>
       <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInternalError">ClientResponseGraphQLInternalError (class in github.errors)</a>
+</li>
+      <li><a href="../client/errors/#github.errors.ClientResponseGraphQLMaximumNodeLimitExceededError">ClientResponseGraphQLMaximumNodeLimitExceededError (class in github.errors)</a>
 </li>
       <li><a href="../client/errors/#github.errors.ClientResponseGraphQLNotFoundError">ClientResponseGraphQLNotFoundError (class in github.errors)</a>
 </li>
@@ -163,14 +190,18 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../client/errors/#github.errors.ClientResponseGraphQLError.data">data (github.errors.ClientResponseGraphQLError attribute)</a>
+      <li><a href="../client/errors/#github.errors.ClientResponseGraphQLArgumentValueRangeExceededError.data">data (github.errors.ClientResponseGraphQLArgumentValueRangeExceededError attribute)</a>
 
       <ul>
+        <li><a href="../client/errors/#github.errors.ClientResponseGraphQLError.data">(github.errors.ClientResponseGraphQLError attribute)</a>
+</li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLForbiddenError.data">(github.errors.ClientResponseGraphQLForbiddenError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInsufficientScopesError.data">(github.errors.ClientResponseGraphQLInsufficientScopesError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInternalError.data">(github.errors.ClientResponseGraphQLInternalError attribute)</a>
+</li>
+        <li><a href="../client/errors/#github.errors.ClientResponseGraphQLMaximumNodeLimitExceededError.data">(github.errors.ClientResponseGraphQLMaximumNodeLimitExceededError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLNotFoundError.data">(github.errors.ClientResponseGraphQLNotFoundError attribute)</a>
 </li>
@@ -199,6 +230,8 @@
 </li>
       <li><a href="../client/client/#github.Client.fetch_all_licenses">fetch_all_licenses() (github.Client method)</a>
 </li>
+      <li><a href="../interfaces/actor/#github.Actor.fetch_avatar_url">fetch_avatar_url() (github.Actor method)</a>
+</li>
       <li><a href="../content/codeofconduct/#github.CodeOfConduct.fetch_body">fetch_body() (github.CodeOfConduct method)</a>
 
       <ul>
@@ -220,6 +253,8 @@
 </li>
         <li><a href="../interfaces/node/#github.Node.fetch_id">(github.Node method)</a>
 </li>
+        <li><a href="../repository/topic/#github.Topic.fetch_id">(github.Topic method)</a>
+</li>
       </ul></li>
       <li><a href="../content/license/#github.License.fetch_implementation">fetch_implementation() (github.License method)</a>
 </li>
@@ -229,8 +264,6 @@
 </li>
       <li><a href="../content/license/#github.License.fetch_is_pseudo">fetch_is_pseudo() (github.License method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../content/codeofconduct/#github.CodeOfConduct.fetch_key">fetch_key() (github.CodeOfConduct method)</a>
 
       <ul>
@@ -239,7 +272,11 @@
       </ul></li>
       <li><a href="../client/client/#github.Client.fetch_license">fetch_license() (github.Client method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../content/license/#github.License.fetch_limitations">fetch_limitations() (github.License method)</a>
+</li>
+      <li><a href="../interfaces/actor/#github.Actor.fetch_login">fetch_login() (github.Actor method)</a>
 </li>
       <li><a href="../client/client/#github.Client.fetch_metadata">fetch_metadata() (github.Client method)</a>
 </li>
@@ -248,10 +285,16 @@
       <ul>
         <li><a href="../content/license/#github.License.fetch_name">(github.License method)</a>
 </li>
+        <li><a href="../repository/topic/#github.Topic.fetch_name">(github.Topic method)</a>
+</li>
       </ul></li>
       <li><a href="../content/license/#github.License.fetch_nickname">fetch_nickname() (github.License method)</a>
 </li>
       <li><a href="../content/license/#github.License.fetch_permissions">fetch_permissions() (github.License method)</a>
+</li>
+      <li><a href="../client/client/#github.Client.fetch_rate_limit">fetch_rate_limit() (github.Client method)</a>
+</li>
+      <li><a href="../repository/topic/#github.Topic.fetch_related_topics">fetch_related_topics() (github.Topic method)</a>
 </li>
       <li><a href="../content/codeofconduct/#github.CodeOfConduct.fetch_resource_path">fetch_resource_path() (github.CodeOfConduct method)</a>
 
@@ -261,10 +304,24 @@
       </ul></li>
       <li><a href="../content/license/#github.License.fetch_spdx_id">fetch_spdx_id() (github.License method)</a>
 </li>
+      <li><a href="../interfaces/starrable/#github.Starrable.fetch_stargazer_count">fetch_stargazer_count() (github.Starrable method)</a>
+
+      <ul>
+        <li><a href="../repository/topic/#github.Topic.fetch_stargazer_count">(github.Topic method)</a>
+</li>
+      </ul></li>
+      <li><a href="../client/client/#github.Client.fetch_topic">fetch_topic() (github.Client method)</a>
+</li>
       <li><a href="../content/codeofconduct/#github.CodeOfConduct.fetch_url">fetch_url() (github.CodeOfConduct method)</a>
 
       <ul>
         <li><a href="../interfaces/uniformresourcelocatable/#github.UniformResourceLocatable.fetch_url">(github.UniformResourceLocatable method)</a>
+</li>
+      </ul></li>
+      <li><a href="../interfaces/starrable/#github.Starrable.fetch_viewer_has_starred">fetch_viewer_has_starred() (github.Starrable method)</a>
+
+      <ul>
+        <li><a href="../repository/topic/#github.Topic.fetch_viewer_has_starred">(github.Topic method)</a>
 </li>
       </ul></li>
       <li><a href="../client/errors/#github.errors.ClientObjectMissingFieldError.fields">fields (github.errors.ClientObjectMissingFieldError attribute)</a>
@@ -303,6 +360,8 @@
         <li><a href="../content/license/#github.License.id">(github.License property)</a>
 </li>
         <li><a href="../interfaces/node/#github.Node.id">(github.Node property)</a>
+</li>
+        <li><a href="../repository/topic/#github.Topic.id">(github.Topic property)</a>
 </li>
       </ul></li>
       <li><a href="../content/license/#github.License.implementation">implementation (github.License property)</a>
@@ -343,11 +402,15 @@
 </li>
       <li><a href="../content/license/#github.License">License (class in github)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../content/licenserule/#github.LicenseRule">LicenseRule (class in github)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../metadata/ratelimit/#github.RateLimit.limit">limit (github.RateLimit property)</a>
+</li>
       <li><a href="../content/license/#github.License.limitations">limitations (github.License property)</a>
+</li>
+      <li><a href="../interfaces/actor/#github.Actor.login">login (github.Actor property)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -362,6 +425,8 @@
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseError.message">(github.errors.ClientResponseError attribute)</a>
 </li>
+        <li><a href="../client/errors/#github.errors.ClientResponseGraphQLArgumentValueRangeExceededError.message">(github.errors.ClientResponseGraphQLArgumentValueRangeExceededError attribute)</a>
+</li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLError.message">(github.errors.ClientResponseGraphQLError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLForbiddenError.message">(github.errors.ClientResponseGraphQLForbiddenError attribute)</a>
@@ -369,6 +434,8 @@
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInsufficientScopesError.message">(github.errors.ClientResponseGraphQLInsufficientScopesError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInternalError.message">(github.errors.ClientResponseGraphQLInternalError attribute)</a>
+</li>
+        <li><a href="../client/errors/#github.errors.ClientResponseGraphQLMaximumNodeLimitExceededError.message">(github.errors.ClientResponseGraphQLMaximumNodeLimitExceededError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLNotFoundError.message">(github.errors.ClientResponseGraphQLNotFoundError attribute)</a>
 </li>
@@ -394,6 +461,8 @@
       <ul>
         <li><a href="../content/license/#github.License.name">(github.License property)</a>
 </li>
+        <li><a href="../repository/topic/#github.Topic.name">(github.Topic property)</a>
+</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -407,10 +476,12 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../metadata/metadata/#github.Metadata.pages_ip_addresses">pages_ip_addresses (github.Metadata property)</a>
+      <li><a href="../interfaces/packageowner/#github.PackageOwner">PackageOwner (class in github)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../metadata/metadata/#github.Metadata.pages_ip_addresses">pages_ip_addresses (github.Metadata property)</a>
+</li>
       <li><a href="../content/license/#github.License.permissions">permissions (github.License property)</a>
 </li>
   </ul></td>
@@ -419,9 +490,15 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../metadata/ratelimit/#github.RateLimit">RateLimit (class in github)</a>
+</li>
+      <li><a href="../metadata/ratelimit/#github.RateLimit.remaining">remaining (github.RateLimit property)</a>
+</li>
       <li><a href="../client/client/#github.Client.request">request() (github.Client method)</a>
 </li>
       <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInsufficientScopesError.required_scopes">required_scopes (github.errors.ClientResponseGraphQLInsufficientScopesError attribute)</a>
+</li>
+      <li><a href="../metadata/ratelimit/#github.RateLimit.resets_at">resets_at (github.RateLimit property)</a>
 </li>
       <li><a href="../content/codeofconduct/#github.CodeOfConduct.resource_path">resource_path (github.CodeOfConduct property)</a>
 
@@ -432,6 +509,8 @@
       <li><a href="../client/errors/#github.errors.ClientResponseError.response">response (github.errors.ClientResponseError attribute)</a>
 
       <ul>
+        <li><a href="../client/errors/#github.errors.ClientResponseGraphQLArgumentValueRangeExceededError.response">(github.errors.ClientResponseGraphQLArgumentValueRangeExceededError attribute)</a>
+</li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLError.response">(github.errors.ClientResponseGraphQLError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLForbiddenError.response">(github.errors.ClientResponseGraphQLForbiddenError attribute)</a>
@@ -439,6 +518,8 @@
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInsufficientScopesError.response">(github.errors.ClientResponseGraphQLInsufficientScopesError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLInternalError.response">(github.errors.ClientResponseGraphQLInternalError attribute)</a>
+</li>
+        <li><a href="../client/errors/#github.errors.ClientResponseGraphQLMaximumNodeLimitExceededError.response">(github.errors.ClientResponseGraphQLMaximumNodeLimitExceededError attribute)</a>
 </li>
         <li><a href="../client/errors/#github.errors.ClientResponseGraphQLNotFoundError.response">(github.errors.ClientResponseGraphQLNotFoundError attribute)</a>
 </li>
@@ -457,9 +538,25 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../client/errors/#github.errors.ServerDeprecationWarning">ServerDeprecationWarning (class in github.errors)</a>
 </li>
+      <li><a href="../content/license/#github.License.spdx_id">spdx_id (github.License property)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../content/license/#github.License.spdx_id">spdx_id (github.License property)</a>
+      <li><a href="../interfaces/starrable/#github.Starrable.stargazer_count">stargazer_count (github.Starrable property)</a>
+
+      <ul>
+        <li><a href="../repository/topic/#github.Topic.stargazer_count">(github.Topic property)</a>
+</li>
+      </ul></li>
+      <li><a href="../interfaces/starrable/#github.Starrable">Starrable (class in github)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../repository/topic/#github.Topic">Topic (class in github)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -469,12 +566,26 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../interfaces/uniformresourcelocatable/#github.UniformResourceLocatable">UniformResourceLocatable (class in github)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../content/codeofconduct/#github.CodeOfConduct.url">url (github.CodeOfConduct property)</a>
 
       <ul>
         <li><a href="../interfaces/uniformresourcelocatable/#github.UniformResourceLocatable.url">(github.UniformResourceLocatable property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../metadata/ratelimit/#github.RateLimit.used">used (github.RateLimit property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../interfaces/starrable/#github.Starrable.viewer_has_starred">viewer_has_starred (github.Starrable property)</a>
+
+      <ul>
+        <li><a href="../repository/topic/#github.Topic.viewer_has_starred">(github.Topic property)</a>
 </li>
       </ul></li>
   </ul></td>

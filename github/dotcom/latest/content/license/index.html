@@ -48,7 +48,10 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/actor/">Actor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/node/">Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/packageowner/">Package Owner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interfaces/starrable/">Starrable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interfaces/uniformresourcelocatable/">Uniform Resource Locatable</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Content</span></p>
@@ -60,6 +63,11 @@
 <p class="caption" role="heading"><span class="caption-text">Metadata</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../metadata/metadata/">Metadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../metadata/ratelimit/">Rate Limit</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../repository/topic/">Topic</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Meta</span></p>
 <ul>
@@ -128,11 +136,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The body of the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -149,11 +154,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A URL to the license on <a class="reference external" href="https://choosealicense.com/">choose a license</a>.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -170,11 +172,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The conditions of the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List[<a class="reference internal" href="../licenserule/#github.LicenseRule" title="github.LicenseRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">LicenseRule</span></code></a>]</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="../licenserule/#github.LicenseRule" title="github.LicenseRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">LicenseRule</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -191,11 +190,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A description of the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -212,11 +208,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The ID of the node.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -233,11 +226,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A guide to implementing the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -254,11 +244,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Whether the license is featured.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -275,11 +262,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Whether the license is hidden.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -296,11 +280,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Whether the license is pseudo.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -317,11 +298,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The machine-readable key of the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -338,11 +316,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The limitations of the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List[<a class="reference internal" href="../licenserule/#github.LicenseRule" title="github.LicenseRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">LicenseRule</span></code></a>]</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="../licenserule/#github.LicenseRule" title="github.LicenseRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">LicenseRule</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -359,11 +334,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The human-readable name of the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -380,11 +352,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The human-readable nickname of the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -401,11 +370,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The permissions of the license.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List[<a class="reference internal" href="../licenserule/#github.LicenseRule" title="github.LicenseRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">LicenseRule</span></code></a>]</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="../licenserule/#github.LicenseRule" title="github.LicenseRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">LicenseRule</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -422,11 +388,8 @@
     attribute is missing. OR; (on a repository-level license)
     The <a class="reference internal" href="#github.License.id" title="github.License.id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code></a> attribute is missing.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The ID of the license on <a class="reference external" href="https://spdx.dev/">SPDX</a>.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
