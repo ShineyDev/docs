@@ -25,5 +25,10 @@
       "v1.2.2",
       "v1.2.3"
     ]
+  },
+  "pretty": {
+    "latest": "latest",
+    "stable": "stable",
+    "tags": []
   }
 }

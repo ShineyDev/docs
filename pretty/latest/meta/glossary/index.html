@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary &mdash; pretty v2.0.0a</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="prev" title="PrettyTracebackFormatter" href="../../traceback/pretty/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../" class="icon icon-home"> pretty
+          </a>
+              <div class="version">
+                v2.0.0a
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Traceback</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../traceback/hook/">Hooking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../traceback/generic/">TracebackFormatter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../traceback/default/">DefaultTracebackFormatter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../traceback/pretty/">PrettyTracebackFormatter</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Meta</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Glossary</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">pretty</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+      <li>Glossary</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/meta/glossary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline"></a></h1>
+<dl class="glossary">
+<dt id="term-PYTHONPRETTY">PYTHONPRETTY<a class="headerlink" href="#term-PYTHONPRETTY" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle
+<a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> the
+<a class="reference internal" href="#term-pretty_hook.pth"><span class="xref std std-term">main hook</span></a> for pretty.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will override any other hook-inducing behavior.</p>
+</div>
+</dd>
+<dt id="term-PYTHONPRETTYTHEME">PYTHONPRETTYTHEME<a class="headerlink" href="#term-PYTHONPRETTYTHEME" title="Permalink to this term"></a></dt><dd><p>This environment variable can contain a
+<a class="reference internal" href="#term-theme-value"><span class="xref std std-term">theme</span></a> by which a
+<a class="reference internal" href="../../traceback/generic/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a> might format its
+output.</p>
+</dd>
+<dt id="term-PYTHONPRETTYTRACEBACK">PYTHONPRETTYTRACEBACK<a class="headerlink" href="#term-PYTHONPRETTYTRACEBACK" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle
+<a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> the
+<a class="reference internal" href="../../traceback/hook/#pretty.traceback.hook" title="pretty.traceback.hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">hook()</span></code></a> for pretty.traceback.</p>
+</dd>
+<dt id="term-boolean-value">boolean value<a class="headerlink" href="#term-boolean-value" title="Permalink to this term"></a></dt><dd><p>An environment variable with this value type will correspond to
+either the boolean value TRUE or the boolean value FALSE.</p>
+<p>The following values are considered TRUE:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">on</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">yes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
+</ul>
+<p>The following values are considered FALSE:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">off</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disable</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">no</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code></p></li>
+</ul>
+</dd>
+<dt id="term-theme-value">theme value<a class="headerlink" href="#term-theme-value" title="Permalink to this term"></a></dt><dd><p>An environment variable with this value type will correspond to
+a theme dictionary.</p>
+</dd>
+<dt id="term-pretty_hook.pth">pretty_hook.pth<a class="headerlink" href="#term-pretty_hook.pth" title="Permalink to this term"></a></dt><dd><p>This hook file is installed into site-packages when you install
+pretty. It allows pretty to hook into all Python sessions, but
+will only do so if you set one or more of the above environment
+variables to a <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">truthy value</span></a>.</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-present, ShineyDev.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
