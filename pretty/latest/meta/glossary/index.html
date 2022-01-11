@@ -19,7 +19,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="prev" title="PrettyTracebackFormatter" href="../../traceback/pretty/" /> 
+    <link rel="prev" title="PrettyTracebackFormatter" href="../../traceback/formatter/pretty/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,10 +42,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Traceback</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../traceback/hook/">Hooking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../traceback/generic/">TracebackFormatter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../traceback/default/">DefaultTracebackFormatter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../traceback/pretty/">PrettyTracebackFormatter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../traceback/hook/">Hook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../traceback/formatter/generic/">TracebackFormatter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../traceback/formatter/default/">DefaultTracebackFormatter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../traceback/formatter/pretty/">PrettyTracebackFormatter</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Meta</span></p>
 <ul class="current">
@@ -89,7 +89,7 @@
 </dd>
 <dt id="term-PYTHONPRETTYTHEME">PYTHONPRETTYTHEME<a class="headerlink" href="#term-PYTHONPRETTYTHEME" title="Permalink to this term"></a></dt><dd><p>This environment variable can contain a
 <a class="reference internal" href="#term-theme-value"><span class="xref std std-term">theme</span></a> by which a
-<a class="reference internal" href="../../traceback/generic/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a> might format its
+<a class="reference internal" href="../../traceback/formatter/generic/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a> might format its
 output.</p>
 </dd>
 <dt id="term-PYTHONPRETTYTRACEBACK">PYTHONPRETTYTRACEBACK<a class="headerlink" href="#term-PYTHONPRETTYTRACEBACK" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle
@@ -98,7 +98,7 @@ output.</p>
 </dd>
 <dt id="term-boolean-value">boolean value<a class="headerlink" href="#term-boolean-value" title="Permalink to this term"></a></dt><dd><p>An environment variable with this value type will correspond to
 either the boolean value TRUE or the boolean value FALSE.</p>
-<p>The following values are considered TRUE:</p>
+<p>The following case-insensitive values are considered TRUE:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
@@ -107,7 +107,7 @@ either the boolean value TRUE or the boolean value FALSE.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">yes</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
 </ul>
-<p>The following values are considered FALSE:</p>
+<p>The following case-insensitive values are considered FALSE:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
