@@ -19,7 +19,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="TracebackFormatter" href="../formatter/generic/" />
+    <link rel="next" title="TracebackFormatter" href="../formatter/abstract/" />
     <link rel="prev" title="pretty" href="../../" /> 
 </head>
 
@@ -44,7 +44,7 @@
               <p class="caption" role="heading"><span class="caption-text">Traceback</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Hook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../formatter/generic/">TracebackFormatter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../formatter/abstract/">TracebackFormatter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../formatter/default/">DefaultTracebackFormatter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../formatter/pretty/">PrettyTracebackFormatter</a></li>
 </ul>
@@ -95,14 +95,14 @@ pretty.traceback into all Python sessions.</p>
 <a class="reference external" href="https://docs.python.org/3/library/traceback.html#module-traceback" title="(in Python v3.10)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">traceback</span></code></a> module with attributes and methods from the
 formatter.</p>
 <p>The following <strong>cannot</strong> change when a
-<a class="reference internal" href="../formatter/generic/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a> subclass
+<a class="reference internal" href="../formatter/abstract/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a> subclass
 overrides built-in <a class="reference external" href="https://docs.python.org/3/library/traceback.html#module-traceback" title="(in Python v3.10)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">traceback</span></code></a> methods:</p>
 <ul class="simple">
 <li><p>Any parameter kind, name, order, or type of any function.</p></li>
 <li><p>The return or yield type of any function.</p></li>
 </ul>
 <p>The following <strong>can</strong> change when a
-<a class="reference internal" href="../formatter/generic/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a> subclass
+<a class="reference internal" href="../formatter/abstract/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a> subclass
 overrides built-in <a class="reference external" href="https://docs.python.org/3/library/traceback.html#module-traceback" title="(in Python v3.10)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">traceback</span></code></a> methods:</p>
 <ul class="simple">
 <li><p>The number and content of lines yielded by any <code class="docutils literal notranslate"><span class="pre">format_*</span></code>
@@ -113,17 +113,17 @@ function.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cls</strong> (Type[<a class="reference internal" href="../formatter/generic/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a>]) – The formatter class to use. Defaults to
+<li><p><strong>cls</strong> (Type[<a class="reference internal" href="../formatter/abstract/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a>]) – The formatter class to use. Defaults to
 <a class="reference internal" href="../formatter/pretty/#pretty.traceback.PrettyTracebackFormatter" title="pretty.traceback.PrettyTracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrettyTracebackFormatter</span></code></a>.</p></li>
 <li><p><strong>**kwargs</strong> – Keyword arguments are passed to
-<a class="reference internal" href="../formatter/generic/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TracebackFormatter.__init__</span></code></a>.</p></li>
+<a class="reference internal" href="../formatter/abstract/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TracebackFormatter.__init__</span></code></a>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The formatter.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../formatter/generic/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../formatter/abstract/#pretty.traceback.TracebackFormatter" title="pretty.traceback.TracebackFormatter"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackFormatter</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
