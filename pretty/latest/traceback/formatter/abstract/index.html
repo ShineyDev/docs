@@ -87,7 +87,7 @@
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.extract_stack">
 <em class="property"><span class="pre">abstractmethod</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">extract_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.extract_stack" title="Permalink to this definition"></a></dt>
 <dd><p>This function returns an <a class="reference external" href="https://docs.python.org/3/glossary.html#term-iterator">iterator</a>.</p>
-<p>Extracts frames from a <a class="reference external" href="https://docs.python.org/3/library/types.html#types.FrameType" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">frame</span></code></a> or
+<p>Extracts a stack from a <a class="reference external" href="https://docs.python.org/3/library/types.html#types.FrameType" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">frame</span></code></a> or
 <a class="reference external" href="https://docs.python.org/3/library/types.html#types.TracebackType" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">traceback</span></code></a>.</p>
 <p>This function is synonymous to both
 <a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.extract_stack" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.extract_stack()</span></code></a> and
@@ -109,7 +109,7 @@
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.format_current_traceback">
 <em class="property"><span class="pre">abstractmethod</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">format_current_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.format_current_traceback" title="Permalink to this definition"></a></dt>
 <dd><p>This function returns an <a class="reference external" href="https://docs.python.org/3/glossary.html#term-iterator">iterator</a>.</p>
-<p>Formats the current exception.</p>
+<p>Formats the current traceback.</p>
 <p>This function is synonymous to <a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.format_exc" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.format_exc()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -129,7 +129,7 @@
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.format_exception">
 <em class="property"><span class="pre">abstractmethod</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">format_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.format_exception" title="Permalink to this definition"></a></dt>
 <dd><p>This function returns an <a class="reference external" href="https://docs.python.org/3/glossary.html#term-iterator">iterator</a>.</p>
-<p>Formats an exception line.</p>
+<p>Formats an exception.</p>
 <p>This function is synonymous to
 <a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.format_exception_only" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.format_exception_only()</span></code></a>.</p>
 <dl class="field-list simple">
@@ -150,7 +150,7 @@
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.format_last_traceback">
 <em class="property"><span class="pre">abstractmethod</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">format_last_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.format_last_traceback" title="Permalink to this definition"></a></dt>
 <dd><p>This function returns an <a class="reference external" href="https://docs.python.org/3/glossary.html#term-iterator">iterator</a>.</p>
-<p>Formats the last exception.</p>
+<p>Formats the last traceback.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -169,7 +169,7 @@
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.format_stack">
 <em class="property"><span class="pre">abstractmethod</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">format_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.format_stack" title="Permalink to this definition"></a></dt>
 <dd><p>This function returns an <a class="reference external" href="https://docs.python.org/3/glossary.html#term-iterator">iterator</a>.</p>
-<p>Formats an iterable of frames.</p>
+<p>Formats a stack.</p>
 <p>This function is synonymous to <a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.format_list" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.format_list()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -188,7 +188,7 @@
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.format_traceback">
 <em class="property"><span class="pre">abstractmethod</span> <span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> </em><span class="sig-name descname"><span class="pre">format_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.format_traceback" title="Permalink to this definition"></a></dt>
 <dd><p>This function returns an <a class="reference external" href="https://docs.python.org/3/glossary.html#term-iterator">iterator</a>.</p>
-<p>Formats an exception.</p>
+<p>Formats a traceback.</p>
 <p>This function is synonymous to
 <a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.format_exception" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.format_exception()</span></code></a>.</p>
 <dl class="field-list simple">
@@ -210,15 +210,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.print_current_traceback">
-<span class="sig-name descname"><span class="pre">print_current_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_current_traceback" title="Permalink to this definition"></a></dt>
-<dd><p>Prints the current exception to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
+<span class="sig-name descname"><span class="pre">print_current_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_current_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Prints the current traceback to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
 <p>This function is synonymous to <a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.print_exc" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.print_exc()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>chain</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to follow the traceback tree.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The maximum number of frames to extract.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -226,14 +226,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.print_exception">
-<span class="sig-name descname"><span class="pre">print_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_exception" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">print_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_exception" title="Permalink to this definition"></a></dt>
 <dd><p>Prints an exception to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>type</strong> (Type[<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a>]) – An exception type.</p></li>
 <li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a>) – An exception.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -241,15 +241,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.print_last_traceback">
-<span class="sig-name descname"><span class="pre">print_last_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_last_traceback" title="Permalink to this definition"></a></dt>
-<dd><p>Prints the last exception to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
+<span class="sig-name descname"><span class="pre">print_last_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_last_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Prints the last traceback to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
 <p>This function is synonymous to <a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.print_last" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.print_last()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>chain</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to follow the traceback tree.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The maximum number of frames to extract.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -257,14 +257,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.print_stack">
-<span class="sig-name descname"><span class="pre">print_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_stack" title="Permalink to this definition"></a></dt>
-<dd><p>Prints an iterable of frames to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
+<span class="sig-name descname"><span class="pre">print_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_stack" title="Permalink to this definition"></a></dt>
+<dd><p>Prints a stack to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
 <p>This function is synonymous to <code class="docutils literal notranslate"><span class="pre">traceback.print_list()</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>frames</strong> (Iterable[Union[<a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.FrameSummary" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameSummary</span></code></a>,                                <a class="reference external" href="https://docs.python.org/3/library/types.html#types.FrameType" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">FrameType</span></code></a>]]) – An iterable of frames.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -272,8 +272,8 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.print_traceback">
-<span class="sig-name descname"><span class="pre">print_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_traceback" title="Permalink to this definition"></a></dt>
-<dd><p>Prints an exception to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
+<span class="sig-name descname"><span class="pre">print_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.print_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Prints a traceback to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p>
 <p>This function is synonymous to
 <a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.print_exception" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">traceback.print_exception()</span></code></a>.</p>
 <dl class="field-list simple">
@@ -283,8 +283,8 @@
 <li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a>) – An exception.</p></li>
 <li><p><strong>traceback</strong> (<a class="reference external" href="https://docs.python.org/3/library/types.html#types.TracebackType" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackType</span></code></a>) – A traceback.</p></li>
 <li><p><strong>chain</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to follow the traceback tree.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The maximum number of frames to extract.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to print to. Defaults to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">stderr</span></code></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -308,13 +308,13 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_current_exception">
-<span class="sig-name descname"><span class="pre">write_current_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_current_exception" title="Permalink to this definition"></a></dt>
-<dd><p>Writes the current exception to a file.</p>
+<dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_current_traceback">
+<span class="sig-name descname"><span class="pre">write_current_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_current_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Writes the current traceback to a stream.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to write to.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to write to.</p></li>
 <li><p><strong>chain</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to follow the traceback tree.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The maximum number of frames to extract.</p></li>
 </ul>
@@ -324,15 +324,27 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_exception">
-<span class="sig-name descname"><span class="pre">write_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_exception" title="Permalink to this definition"></a></dt>
-<dd><p>Writes an exception to a file.</p>
+<span class="sig-name descname"><span class="pre">write_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_exception" title="Permalink to this definition"></a></dt>
+<dd><p>Writes an exception to a stream.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>type</strong> (Type[<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a>]) – An exception type.</p></li>
 <li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a>) – An exception.</p></li>
-<li><p><strong>traceback</strong> (<a class="reference external" href="https://docs.python.org/3/library/types.html#types.TracebackType" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackType</span></code></a>) – A traceback.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to write to.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to write to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_last_traceback">
+<span class="sig-name descname"><span class="pre">write_last_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_last_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Writes the last traceback to a stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to write to.</p></li>
 <li><p><strong>chain</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to follow the traceback tree.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The maximum number of frames to extract.</p></li>
 </ul>
@@ -341,42 +353,30 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_exception_only">
-<span class="sig-name descname"><span class="pre">write_exception_only</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_exception_only" title="Permalink to this definition"></a></dt>
-<dd><p>Writes an exception to a file.</p>
+<dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_stack">
+<span class="sig-name descname"><span class="pre">write_stack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_stack" title="Permalink to this definition"></a></dt>
+<dd><p>Writes a stack to a stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frames</strong> (Iterable[Union[<a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.FrameSummary" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameSummary</span></code></a>,                                <a class="reference external" href="https://docs.python.org/3/library/types.html#types.FrameType" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">FrameType</span></code></a>]]) – An iterable of frames.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to write to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_traceback">
+<span class="sig-name descname"><span class="pre">write_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_traceback" title="Permalink to this definition"></a></dt>
+<dd><p>Writes a traceback to a stream.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>type</strong> (Type[<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a>]) – An exception type.</p></li>
 <li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#BaseException" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseException</span></code></a>) – An exception.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to write to.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_frames">
-<span class="sig-name descname"><span class="pre">write_frames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_frames" title="Permalink to this definition"></a></dt>
-<dd><p>Writes an iterable of frames to a file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>frames</strong> (Iterable[Union[<a class="reference external" href="https://docs.python.org/3/library/traceback.html#traceback.FrameSummary" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">FrameSummary</span></code></a>,                                <a class="reference external" href="https://docs.python.org/3/library/types.html#types.FrameType" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">FrameType</span></code></a>]]) – An iterable of frames.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to write to.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pretty.traceback.TracebackFormatter.write_last_exception">
-<span class="sig-name descname"><span class="pre">write_last_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pretty.traceback.TracebackFormatter.write_last_exception" title="Permalink to this definition"></a></dt>
-<dd><p>Writes the last exception to a file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The file to write to.</p></li>
+<li><p><strong>traceback</strong> (<a class="reference external" href="https://docs.python.org/3/library/types.html#types.TracebackType" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TracebackType</span></code></a>) – A traceback.</p></li>
+<li><p><strong>stream</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#open" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">TextIO</span></code></a>) – The stream to write to.</p></li>
 <li><p><strong>chain</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to follow the traceback tree.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The maximum number of frames to extract.</p></li>
 </ul>
