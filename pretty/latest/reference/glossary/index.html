@@ -88,9 +88,23 @@
 <dt id="term-PYTHONPRETTY">PYTHONPRETTY<a class="headerlink" href="#term-PYTHONPRETTY" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle
 <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> the
 <a class="reference internal" href="#term-pretty_hook.pth"><span class="xref std std-term">main hook</span></a> for pretty.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This will override any other hook-inducing behavior.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When this environment variable is set to a
+<a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">truthy value</span></a>, all pretty modules
+will be hooked, unless the module is explicitly disabled
+with its respective
+<a class="reference internal" href="#term-PYTHONPRETTYTRACEBACK"><span class="xref std std-term">PYTHONPRETTY…</span></a> environment
+variable.</p>
+<p>When this environment variable is set to a
+<a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">falsey value</span></a>, no pretty module
+will be hooked, regardless of the value in its respective
+<a class="reference internal" href="#term-PYTHONPRETTYTRACEBACK"><span class="xref std std-term">PYTHONPRETTY…</span></a> environment
+variable.</p>
+<p>When this environment variable is unset, only the
+<a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">state</span></a> of each
+<a class="reference internal" href="#term-PYTHONPRETTYTRACEBACK"><span class="xref std std-term">PYTHONPRETTY…</span></a> environment
+variable is used.</p>
 </div>
 </dd>
 <dt id="term-PYTHONPRETTYTHEME">PYTHONPRETTYTHEME<a class="headerlink" href="#term-PYTHONPRETTYTHEME" title="Permalink to this term"></a></dt><dd><p>This environment variable can contain a
