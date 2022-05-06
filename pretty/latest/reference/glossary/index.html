@@ -96,6 +96,16 @@ module will be hooked, regardless of the value in its respective
 <p>When this environment variable is unset, only the <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">state</span></a> of each
 <a class="reference internal" href="#term-PYTHONPRETTYTRACEBACK"><span class="xref std std-term">PYTHONPRETTY…</span></a> environment variable is used.</p>
 </dd>
+<dt id="term-PYTHONPRETTYANSI">PYTHONPRETTYANSI<a class="headerlink" href="#term-PYTHONPRETTYANSI" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> ANSI output for
+pretty.</p>
+<p>When this environment variable is set to a <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">truthy value</span></a>, ANSI
+output will be enabled, regardless of the value in the <a class="reference internal" href="#term-NO_COLOR"><span class="xref std std-term">NO_COLOR</span></a> environment
+variable.</p>
+<p>When this environment variable is set to a <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">falsey value</span></a>, ANSI
+output will be disabled.</p>
+<p>When this environment variable is unset, the value of the <a class="reference internal" href="#term-NO_COLOR"><span class="xref std std-term">NO_COLOR</span></a> environment
+variable is considered before ANSI output defaults to enabled.</p>
+</dd>
 <dt id="term-PYTHONPRETTYTHEME">PYTHONPRETTYTHEME<a class="headerlink" href="#term-PYTHONPRETTYTHEME" title="Permalink to this term"></a></dt><dd><p>This environment variable can contain a <a class="reference internal" href="#term-json-value"><span class="xref std std-term">theme</span></a> by which a formatter
 might format format its output.</p>
 <p>When this environment variable is set, its value will merge with the default pretty theme
@@ -105,13 +115,13 @@ via <code class="docutils literal notranslate"><span class="pre">default.update(
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">ast_comment_sgr</span></span></dt>
-<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#comments">comment tokens</a>.</p>
+<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#comments">comment tokens</a> in an <a class="reference external" href="https://docs.python.org/3/library/ast.html">abstract syntax tree</a>.</p>
 </dd></dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">ast_delimiter_sgr</span></span></dt>
-<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to the following <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#delimiters">delimiter tokens</a>.</p>
+<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to the following <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#delimiters">delimiter tokens</a> in an <a class="reference external" href="https://docs.python.org/3/library/ast.html">abstract syntax tree</a>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">(</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">)</span></code></p></li>
@@ -130,7 +140,7 @@ via <code class="docutils literal notranslate"><span class="pre">default.update(
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">ast_keyword_sgr</span></span></dt>
-<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to the following <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">keyword tokens</a>.</p>
+<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to the following <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">keyword tokens</a> in an <a class="reference external" href="https://docs.python.org/3/library/ast.html">abstract syntax tree</a>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">_</span></code> (in Python 3.10+ as described by <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#soft-keywords">soft keyword tokens</a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">and</span></code></p></li>
@@ -173,14 +183,13 @@ via <code class="docutils literal notranslate"><span class="pre">default.update(
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">ast_name_sgr</span></span></dt>
-<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">name tokens</a> that do not fall under another <code class="docutils literal notranslate"><span class="pre">ast_*</span></code> or
-<code class="docutils literal notranslate"><span class="pre">literal_*</span></code>.</p>
+<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">name tokens</a> in an <a class="reference external" href="https://docs.python.org/3/library/ast.html">abstract syntax tree</a>.</p>
 </dd></dl>
 
 <dl class="describe">
 <dt class="sig sig-object">
 <span class="sig-name descname"><span class="pre">ast_operator_sgr</span></span></dt>
-<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#operators">operator tokens</a>.</p>
+<dd><p>The <a class="reference internal" href="#term-SGR-value"><span class="xref std std-term">SGR value</span></a> given to <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#operators">operator tokens</a> in an <a class="reference external" href="https://docs.python.org/3/library/ast.html">abstract syntax tree</a>.</p>
 </dd></dl>
 
 </dd>
@@ -192,6 +201,9 @@ or unset, <a class="reference internal" href="../pretty/traceback/hook/#pretty.t
 <p>When this environment variable is set to a <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">falsey value</span></a>, unset, or
 the <a class="reference internal" href="#term-PYTHONPRETTY"><span class="xref std std-term">PYTHONPRETTY</span></a> environment variable is set to a
 <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">falsey value</span></a>, <a class="reference internal" href="../pretty/traceback/hook/#pretty.traceback.hook" title="pretty.traceback.hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">pretty.traceback.hook()</span></code></a> is not called.</p>
+</dd>
+<dt id="term-NO_COLOR">NO_COLOR<a class="headerlink" href="#term-NO_COLOR" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> ANSI output for all
+<a class="reference external" href="https://no-color.org">supporting software</a>.</p>
 </dd>
 <dt id="term-boolean-value">boolean value<a class="headerlink" href="#term-boolean-value" title="Permalink to this term"></a></dt><dd><p>An environment variable with this value type corresponds to either the boolean value FALSE
 or the boolean value TRUE.</p>
