@@ -85,12 +85,12 @@
   <section id="errors">
 <h1>Errors<a class="headerlink" href="#errors" title="Permalink to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientError">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.errors.</span></span><span class="sig-name descname"><span class="pre">ClientError</span></span><a class="headerlink" href="#graphql.client.errors.ClientError" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.</span></span><span class="sig-name descname"><span class="pre">ClientError</span></span><a class="headerlink" href="#graphql.client.ClientError" title="Permalink to this definition"></a></dt>
 <dd><p>The base exception class for the GraphQL client.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#graphql.client.errors.ClientError.message" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#graphql.client.ClientError.message" title="Permalink to this definition"></a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -102,12 +102,12 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseError">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseError</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseError" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.</span></span><span class="sig-name descname"><span class="pre">ClientResponseError</span></span><a class="headerlink" href="#graphql.client.ClientResponseError" title="Permalink to this definition"></a></dt>
 <dd><p>Represents an error in a response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseError.message" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#graphql.client.ClientResponseError.message" title="Permalink to this definition"></a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -117,8 +117,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseError.response" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#graphql.client.ClientResponseError.response" title="Permalink to this definition"></a></dt>
 <dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -130,12 +130,12 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseGraphQLError">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseGraphQLError</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseGraphQLError" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseGraphQLError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.</span></span><span class="sig-name descname"><span class="pre">ClientResponseGraphQLError</span></span><a class="headerlink" href="#graphql.client.ClientResponseGraphQLError" title="Permalink to this definition"></a></dt>
 <dd><p>Represents an error in a GraphQL response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseGraphQLError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseGraphQLError.message" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseGraphQLError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#graphql.client.ClientResponseGraphQLError.message" title="Permalink to this definition"></a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -145,8 +145,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseGraphQLError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseGraphQLError.response" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseGraphQLError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#graphql.client.ClientResponseGraphQLError.response" title="Permalink to this definition"></a></dt>
 <dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -156,8 +156,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseGraphQLError.data">
-<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseGraphQLError.data" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseGraphQLError.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#graphql.client.ClientResponseGraphQLError.data" title="Permalink to this definition"></a></dt>
 <dd><p>The response data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -169,12 +169,12 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseHTTPError">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.errors.</span></span><span class="sig-name descname"><span class="pre">ClientResponseHTTPError</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseHTTPError" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseHTTPError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.</span></span><span class="sig-name descname"><span class="pre">ClientResponseHTTPError</span></span><a class="headerlink" href="#graphql.client.ClientResponseHTTPError" title="Permalink to this definition"></a></dt>
 <dd><p>Represents an error in an HTTP response.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseHTTPError.message">
-<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseHTTPError.message" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseHTTPError.message">
+<span class="sig-name descname"><span class="pre">message</span></span><a class="headerlink" href="#graphql.client.ClientResponseHTTPError.message" title="Permalink to this definition"></a></dt>
 <dd><p>The error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -184,8 +184,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseHTTPError.response">
-<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseHTTPError.response" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseHTTPError.response">
+<span class="sig-name descname"><span class="pre">response</span></span><a class="headerlink" href="#graphql.client.ClientResponseHTTPError.response" title="Permalink to this definition"></a></dt>
 <dd><p>The client response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -195,8 +195,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientResponseHTTPError.data">
-<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#graphql.client.errors.ClientResponseHTTPError.data" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="graphql.client.ClientResponseHTTPError.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#graphql.client.ClientResponseHTTPError.data" title="Permalink to this definition"></a></dt>
 <dd><p>The response data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -208,15 +208,15 @@
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="graphql.client.errors.ClientDeprecationWarning">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.errors.</span></span><span class="sig-name descname"><span class="pre">ClientDeprecationWarning</span></span><a class="headerlink" href="#graphql.client.errors.ClientDeprecationWarning" title="Permalink to this definition"></a></dt>
-<dd><p>Represents a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning" title="(in Python v3.10)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> from the GraphQL client.</p>
+<dt class="sig sig-object py" id="graphql.client.ClientDeprecationWarning">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.</span></span><span class="sig-name descname"><span class="pre">ClientDeprecationWarning</span></span><a class="headerlink" href="#graphql.client.ClientDeprecationWarning" title="Permalink to this definition"></a></dt>
+<dd><p>Represents a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning" title="(in Python v3.10)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">deprecation</span> <span class="pre">warning</span></code></a> from the GraphQL client.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="graphql.client.errors.ServerDeprecationWarning">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.errors.</span></span><span class="sig-name descname"><span class="pre">ServerDeprecationWarning</span></span><a class="headerlink" href="#graphql.client.errors.ServerDeprecationWarning" title="Permalink to this definition"></a></dt>
-<dd><p>Represents a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning" title="(in Python v3.10)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> from the GraphQL server.</p>
+<dt class="sig sig-object py" id="graphql.client.ServerDeprecationWarning">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">graphql.client.</span></span><span class="sig-name descname"><span class="pre">ServerDeprecationWarning</span></span><a class="headerlink" href="#graphql.client.ServerDeprecationWarning" title="Permalink to this definition"></a></dt>
+<dd><p>Represents a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#DeprecationWarning" title="(in Python v3.10)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">deprecation</span> <span class="pre">warning</span></code></a> from the GraphQL server.</p>
 </dd></dl>
 
 <section id="hierarchy">
