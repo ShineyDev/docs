@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Starrable &mdash; github v1.0.0.0a</title>
+  <title>Profile Owner &mdash; github v1.0.0.0a</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../../../_static/favicon.svg"/>
@@ -20,8 +20,8 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex/" />
     <link rel="search" title="Search" href="../../../../search/" />
-    <link rel="next" title="Uniform Resource Locatable" href="../uniformresourcelocatable/" />
-    <link rel="prev" title="Profile Owner" href="../profileowner/" /> 
+    <link rel="next" title="Starrable" href="../starrable/" />
+    <link rel="prev" title="Package Owner" href="../packageowner/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -80,8 +80,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../actor/">Actor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../node/">Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../packageowner/">Package Owner</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../profileowner/">Profile Owner</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Starrable</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Profile Owner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../starrable/">Starrable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../uniformresourcelocatable/">Uniform Resource Locatable</a></li>
 </ul>
 </li>
@@ -108,9 +108,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../">github.interfaces</a></li>
-      <li class="breadcrumb-item active">Starrable</li>
+      <li class="breadcrumb-item active">Profile Owner</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../../_sources/reference/github/interfaces/starrable.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../../_sources/reference/github/interfaces/profileowner.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -118,62 +118,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="starrable">
-<h1>Starrable<a class="headerlink" href="#starrable" title="Permalink to this heading"></a></h1>
+  <section id="profile-owner">
+<h1>Profile Owner<a class="headerlink" href="#profile-owner" title="Permalink to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="github.Starrable">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">github.</span></span><span class="sig-name descname"><span class="pre">Starrable</span></span><a class="headerlink" href="#github.Starrable" title="Permalink to this definition"></a></dt>
-<dd><p>Represents an object that can be starred.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="github.Starrable.fetch_stargazer_count">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_stargazer_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Starrable.fetch_stargazer_count" title="Permalink to this definition"></a></dt>
-<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
-<p>Fetches the number of stars on the starrable.</p>
+<dt class="sig sig-object py" id="github.ProfileOwner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">github.</span></span><span class="sig-name descname"><span class="pre">ProfileOwner</span></span><a class="headerlink" href="#github.ProfileOwner" title="Permalink to this definition"></a></dt>
+<dd><p>Represents an object that can own a profile.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="github.ProfileOwner.email">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#github.ProfileOwner.email" title="Permalink to this definition"></a></dt>
+<dd><p>The email of the profile owner.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="github.Starrable.fetch_viewer_has_starred">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">fetch_viewer_has_starred</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Starrable.fetch_viewer_has_starred" title="Permalink to this definition"></a></dt>
-<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
-<p>Fetches whether the viewer has starred the starrable.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="github.ProfileOwner.has_pinnable_items">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_pinnable_items</span></span><a class="headerlink" href="#github.ProfileOwner.has_pinnable_items" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the profile owner has any pinnable items.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="github.Starrable.star">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">star</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Starrable.star" title="Permalink to this definition"></a></dt>
-<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
-<p>Stars the starrable.</p>
-<p>Use of this mutation will also update the following fields:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#github.Starrable.viewer_has_starred" title="github.Starrable.viewer_has_starred"><code class="xref py py-attr docutils literal notranslate"><span class="pre">viewer_has_starred</span></code></a></p></li>
-</ul>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="github.Starrable.unstar">
-<em class="property"><span class="pre">await</span> </em><span class="sig-name descname"><span class="pre">unstar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#github.Starrable.unstar" title="Permalink to this definition"></a></dt>
-<dd><p>This function returns a <a class="reference external" href="https://docs.python.org/3/library/asyncio-task.html#coroutine">coroutine</a>.</p>
-<p>Unstars the starrable.</p>
-<p>Use of this mutation will also update the following fields:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#github.Starrable.viewer_has_starred" title="github.Starrable.viewer_has_starred"><code class="xref py py-attr docutils literal notranslate"><span class="pre">viewer_has_starred</span></code></a></p></li>
-</ul>
+<dl class="py property">
+<dt class="sig sig-object py" id="github.ProfileOwner.has_pinned_items">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_pinned_items</span></span><a class="headerlink" href="#github.ProfileOwner.has_pinned_items" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the profile owner has any pinned items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="github.Starrable.stargazer_count">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stargazer_count</span></span><a class="headerlink" href="#github.Starrable.stargazer_count" title="Permalink to this definition"></a></dt>
-<dd><p>The number of stars on the starrable.</p>
+<dt class="sig sig-object py" id="github.ProfileOwner.location">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">location</span></span><a class="headerlink" href="#github.ProfileOwner.location" title="Permalink to this definition"></a></dt>
+<dd><p>The location of the profile owner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="github.ProfileOwner.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#github.ProfileOwner.name" title="Permalink to this definition"></a></dt>
+<dd><p>The name of the profile owner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="github.ProfileOwner.showcase_slots_remaining">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">showcase_slots_remaining</span></span><a class="headerlink" href="#github.ProfileOwner.showcase_slots_remaining" title="Permalink to this definition"></a></dt>
+<dd><p>The number of slots remaining in the showcase of the profile owner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p>
@@ -182,12 +191,23 @@
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="github.Starrable.viewer_has_starred">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">viewer_has_starred</span></span><a class="headerlink" href="#github.Starrable.viewer_has_starred" title="Permalink to this definition"></a></dt>
-<dd><p>Whether the viewer has starred the starrable.</p>
+<dt class="sig sig-object py" id="github.ProfileOwner.viewer_can_update_showcase">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">viewer_can_update_showcase</span></span><a class="headerlink" href="#github.ProfileOwner.viewer_can_update_showcase" title="Permalink to this definition"></a></dt>
+<dd><p>Whether the authenticated user can update the showcase of the profile owner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="github.ProfileOwner.website">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">website</span></span><a class="headerlink" href="#github.ProfileOwner.website" title="Permalink to this definition"></a></dt>
+<dd><p>The website of the profile owner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
 </dd>
 </dl>
 </dd></dl>
