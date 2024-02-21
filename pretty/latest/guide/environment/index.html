@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Environment &mdash; pretty v2.0.0a</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
     <link rel="shortcut icon" href="../../_static/favicon.svg"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=8135badc"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
@@ -29,14 +31,18 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../" class="icon icon-home"> pretty
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            pretty
           </a>
               <div class="version">
                 v2.0.0a
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,8 +85,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-      <li>Environment</li>
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Environment</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/guide/environment.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -91,11 +97,11 @@
            <div itemprop="articleBody">
              
   <section id="environment">
-<h1>Environment<a class="headerlink" href="#environment" title="Permalink to this heading"></a></h1>
+<h1>Environment<a class="headerlink" href="#environment" title="Link to this heading"></a></h1>
 <section id="toggle">
-<h2>Toggle<a class="headerlink" href="#toggle" title="Permalink to this heading"></a></h2>
+<h2>Toggle<a class="headerlink" href="#toggle" title="Link to this heading"></a></h2>
 <dl class="glossary">
-<dt id="term-PYTHONPRETTY">PYTHONPRETTY<a class="headerlink" href="#term-PYTHONPRETTY" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> the
+<dt id="term-PYTHONPRETTY">PYTHONPRETTY<a class="headerlink" href="#term-PYTHONPRETTY" title="Link to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> the
 <a class="reference internal" href="../../reference/glossary/#term-pretty_hook.pth"><span class="xref std std-term">main hook</span></a> for pretty.</p>
 <p>When this environment variable is set to a <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">truthy value</span></a> all pretty
 modules will be hooked, unless the module is explicitly disabled with its respective
@@ -112,7 +118,7 @@ module will be hooked, regardless of the <a class="reference internal" href="#te
 <a class="reference internal" href="#term-PYTHONPRETTYTRACEBACK"><span class="xref std std-term">PYTHONPRETTY*</span></a> environment variable is used to determine
 whether its respective module will be hooked.</p>
 </dd>
-<dt id="term-PYTHONPRETTYTRACEBACK">PYTHONPRETTYTRACEBACK<a class="headerlink" href="#term-PYTHONPRETTYTRACEBACK" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> the
+<dt id="term-PYTHONPRETTYTRACEBACK">PYTHONPRETTYTRACEBACK<a class="headerlink" href="#term-PYTHONPRETTYTRACEBACK" title="Link to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> the
 <a class="reference internal" href="../../reference/pretty/traceback/hook/#pretty.traceback.hook" title="pretty.traceback.hook"><code class="xref py py-func docutils literal notranslate"><span class="pre">hook()</span></code></a> for pretty.traceback.</p>
 <p>When this environment variable is set to a <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">truthy value</span></a>, after
 considering the state of the <a class="reference internal" href="#term-PYTHONPRETTY"><span class="xref std std-term">PYTHONPRETTY</span></a> environment variable,
@@ -125,9 +131,9 @@ considering the state of the <a class="reference internal" href="#term-PYTHONPRE
 </dl>
 </section>
 <section id="theme">
-<h2>Theme<a class="headerlink" href="#theme" title="Permalink to this heading"></a></h2>
+<h2>Theme<a class="headerlink" href="#theme" title="Link to this heading"></a></h2>
 <dl class="glossary">
-<dt id="term-PYTHONPRETTYTHEME">PYTHONPRETTYTHEME<a class="headerlink" href="#term-PYTHONPRETTYTHEME" title="Permalink to this term"></a></dt><dd><p>This environment variable can contain a <a class="reference internal" href="#term-JSON-value"><span class="xref std std-term">theme</span></a> by which a formatter
+<dt id="term-PYTHONPRETTYTHEME">PYTHONPRETTYTHEME<a class="headerlink" href="#term-PYTHONPRETTYTHEME" title="Link to this term"></a></dt><dd><p>This environment variable can contain a <a class="reference internal" href="#term-JSON-value"><span class="xref std std-term">theme</span></a> by which a formatter
 might format its output.</p>
 <p>When this environment variable is set, its value will merge with the default pretty theme
 via <code class="docutils literal notranslate"><span class="pre">default.update(custom)</span></code>.</p>
@@ -217,9 +223,9 @@ via <code class="docutils literal notranslate"><span class="pre">default.update(
 </dl>
 </section>
 <section id="color">
-<h2>Color<a class="headerlink" href="#color" title="Permalink to this heading"></a></h2>
+<h2>Color<a class="headerlink" href="#color" title="Link to this heading"></a></h2>
 <dl class="glossary">
-<dt id="term-PYTHONPRETTYANSI">PYTHONPRETTYANSI<a class="headerlink" href="#term-PYTHONPRETTYANSI" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> ANSI output for
+<dt id="term-PYTHONPRETTYANSI">PYTHONPRETTYANSI<a class="headerlink" href="#term-PYTHONPRETTYANSI" title="Link to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> ANSI output for
 pretty.</p>
 <p>When this environment variable is set to a <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">truthy value</span></a> ANSI output
 will be enabled, regardless of the state of the <a class="reference internal" href="#term-NO_COLOR"><span class="xref std std-term">NO_COLOR</span></a> environment variable.</p>
@@ -228,15 +234,15 @@ will be disabled, regardless of the state of the <a class="reference internal" h
 <p>When this environment variable is unset the value of the <a class="reference internal" href="#term-NO_COLOR"><span class="xref std std-term">NO_COLOR</span></a> environment
 variable is considered, before ANSI output remains enabled by default.</p>
 </dd>
-<dt id="term-NO_COLOR">NO_COLOR<a class="headerlink" href="#term-NO_COLOR" title="Permalink to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> ANSI output for all
+<dt id="term-NO_COLOR">NO_COLOR<a class="headerlink" href="#term-NO_COLOR" title="Link to this term"></a></dt><dd><p>This environment variable can toggle <a class="reference internal" href="#term-boolean-value"><span class="xref std std-term">on or off</span></a> ANSI output for all
 <a class="reference external" href="https://no-color.org">supporting software</a>.</p>
 </dd>
 </dl>
 </section>
 <section id="value">
-<h2>Value<a class="headerlink" href="#value" title="Permalink to this heading"></a></h2>
+<h2>Value<a class="headerlink" href="#value" title="Link to this heading"></a></h2>
 <dl class="glossary">
-<dt id="term-boolean-value">boolean value<a class="headerlink" href="#term-boolean-value" title="Permalink to this term"></a></dt><dd><p>An environment variable with this value type corresponds to either the boolean value FALSE
+<dt id="term-boolean-value">boolean value<a class="headerlink" href="#term-boolean-value" title="Link to this term"></a></dt><dd><p>An environment variable with this value type corresponds to either the boolean value FALSE
 or the boolean value TRUE.</p>
 <p>The following case-insensitive values are considered FALSE:</p>
 <ul class="simple">
@@ -259,12 +265,12 @@ or the boolean value TRUE.</p>
 <p>When the value of a boolean environment variable does not match any of the above
 values, it will fall back to its unset behavior.</p>
 </dd>
-<dt id="term-JSON-value">JSON value<a class="headerlink" href="#term-JSON-value" title="Permalink to this term"></a></dt><dd><p>An environment variable with this value type corresponds to a JSON-encoded key-value
+<dt id="term-JSON-value">JSON value<a class="headerlink" href="#term-JSON-value" title="Link to this term"></a></dt><dd><p>An environment variable with this value type corresponds to a JSON-encoded key-value
 mapping.</p>
-<p>When the value of a JSON environment variable does not parse, it will fall back to its
-unset behavior.</p>
+<p>When the value of a JSON environment variable does not parse or does not produce a mapping,
+it will fall back to its unset behavior.</p>
 </dd>
-<dt id="term-SGR-value">SGR value<a class="headerlink" href="#term-SGR-value" title="Permalink to this term"></a></dt><dd><p>A theme item with this value type corresponds to a tuple of two <a class="reference external" href="https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters">SGR</a> values, a single
+<dt id="term-SGR-value">SGR value<a class="headerlink" href="#term-SGR-value" title="Link to this term"></a></dt><dd><p>A theme item with this value type corresponds to a tuple of two <a class="reference external" href="https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters">SGR</a> values, a single
 <a class="reference external" href="https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_(Select_Graphic_Rendition)_parameters">SGR</a> value, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <p>When a theme item with this value type is set to <code class="docutils literal notranslate"><span class="pre">None</span></code>, the corresponding theme item
 will be ignored.</p>
